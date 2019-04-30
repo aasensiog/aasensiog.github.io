@@ -1,0 +1,169 @@
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera Número de la Seguridad Social</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_ssn" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_ssn'></span>
+                    </span>
+                </div>
+                <a href="#historial_ssn_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_ssn_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_ssn" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_ssn" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_ssn" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='ssn' data-toggle="tooltip" title="Genera otro">
+                SSN <i class="fa fa-redo"></i>
+            </button>
+        </div>
+        <!--<div class="card-footer">-->
+            <!--<i class="fa fa-info"></i> Formato: <b>PP NNNNNNNN DC</b>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>PP</b>: 2 dígitos de la provincia</li>-->
+                <!--<li class="list-group-item"><b>NNNNNNNN</b>: 8 dígitos, número secuencial</li>-->
+                <!--<li class="list-group-item"><b>DC</b>: 2 dígitos de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Calcula Dígito Control de la Seguridad Social</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id='cifra_control_ssn' maxlength='10' title="Calcula SSN" placeholder="Ej. 1740970002">
+                    <span class="text-muted"><i class="fa fa-question-circle"></i> <i>Los 10 primeros caracteres del número de la seguridad social</i></span>
+                    <hr>
+                    <div class="btn-group btn-lg btn-block expand_all" role="group">
+                        <button class="btn btn-lg btn-outline-info copy" title="Copiar" data-clipboard-target="#cifra_control_ssn" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                        <button class="btn btn-lg btn-outline-info" id='cifra_control_ssn_btn' title="Calcula dígito de control" data-toggle="tooltip">SSN <i class="fa fa-redo"></i></button>
+                    </div>
+
+                    <p id="cifra_control_ssn_error" class="text-danger"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera Pasaporte</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_pasaporte" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_pasaporte'></span>
+                    </span>
+                </div>
+                <a href="#historial_pasaporte_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_pasaporte_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_pasaporte" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_pasaporte" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_pasaporte" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='pasaporte' data-toggle="tooltip" title="Genera otro">
+                Pasaporte <i class="fa fa-redo"></i>
+            </button>
+        </div>
+        <!--<div class="card-footer">-->
+            <!--<i class="fa fa-info"></i> Formato: <b>LLL NNNNNN C</b>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>LLL</b>: 3 caracteres</li>-->
+                <!--<li class="list-group-item"><b>NNNNNN</b>: 6 dígitos, número secuencial</li>-->
+                <!--<li class="list-group-item"><b>C</b>: dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+</div>
+<br>
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera código LEI</b> <i class="fas fa-certificate text-warning"></i></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_lei" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_lei'></span>
+                    </span>
+                </div>
+                <a href="#historial_lei_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_lei_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_lei" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_lei" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_lei" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='lei' data-toggle="tooltip" title="Genera otro">
+                LEI <i class="fa fa-redo"></i>
+            </button>
+        </div>
+        <!--<div class="card-footer">-->
+            <!--<i class="fa fa-info"></i> Formato: <b>PPPP00NNNNNNNNNNNNDC</b>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>PPPP</b>: 4 dígitos de país. 9598 para España</li>-->
+                <!--<li class="list-group-item"><b>00</b>: 2 dígitos reservados</li>-->
+                <!--<li class="list-group-item"><b>NNNNNNNNNNNN</b>: 12 dígitos, número secuencial</li>-->
+                <!--<li class="list-group-item"><b>DC</b>: 2 dígitos de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Valida código LEI</b> <i class="fas fa-certificate text-warning"></i></span>
+        </div>
+        <div class="card-body">
+            <input type="text" class="form-control" id='valida_lei' maxlength='20' title="Valida Código LEI" placeholder="Ej. 959800UZ2BLYJBAOU646">
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info" id='valida_lei_btn' title="Valida LEI" data-toggle="tooltip">Valida <i class="fa fa-check"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#valida_lei" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+            </div>
+
+            <p id="valida_lei_error" class="text-danger"></p>
+            <p id="valida_lei_res" class="text-info text-center"></p>
+        </div>
+    </div>
+</div>

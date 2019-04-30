@@ -1,0 +1,94 @@
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header text-info">
+             <b>Genera documentos masivamente</b>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="masivo_doc">Tipo de documento</label>
+                    <select class="form-control" id="masivo_doc">
+                        <option value="nif">NIF</option>
+                        <option value="nie">NIE</option>
+                        <option value="cif">CIF</option>
+                        <option value="matricula">Matrícula</option>
+                        <option value="bastidor">Bastidor</option>
+                        <option value="ccc">Código Cuenta Corriente</option>
+                        <option value="iban">IBAN</option>
+                        <option value="tarjeta">Tarjeta de crédito</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="masivo_quantity">Cantidad (máximo: 100)</label>
+                    <input type="number" class="form-control" max="100" id="masivo_quantity" value="10"/>
+                </div>
+                <div class="col-md-3">
+                    <label for="genera_masivo">&nbsp;</label>
+                    <button class="btn btn-outline-info btn-block" id="genera_masivo"><i class="fa fa-redo"></i> Generar</button>
+                </div>
+            </div>
+            <br>
+            <div class="row" id="result_div">
+                <div class="col-md-9">
+                    <textarea id="masivo_result" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-info btn-block btn-lg copy_html" title="Copiar" data-clipboard-target="#masivo_result" data-toggle="tooltip"><i class="fa fa-copy"></i> Copiar</button>
+                    <button type="button" class="btn btn-outline-info btn-block btn-lg" data-toggle="modal" data-target="#modal_masivo"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal_masivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Descarga de archivo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label" for="masivo_filename">Nombre del fichero:</label>
+                        <input class="form-control" id="masivo_filename" placeholder="mifichero" autofocus="autofocus"/>
+                        <span class="text-muted">El sistema añade automáticamente la extensión</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label" for="masivo_format">Formato:</label>
+                        <select class="form-control" id="masivo_format">
+                            <option value="txt">.txt</option>
+                            <option value="csv">.csv</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!-- generadordni_modal_descarga -->
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- generadordni modal -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-7556109134559449"
+                             data-ad-slot="1224987302"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-info" id="masivo_download" data-dismiss="modal">Descargar</button>
+            </div>
+        </div>
+    </div>
+</div>

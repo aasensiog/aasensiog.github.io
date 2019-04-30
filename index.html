@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title data-role="titulo">Generador de DNI</title>
+    <meta name="description" content="Generador de DNI aleatorio, Calcula letra DNI, Calcula letra NIF, NIE, CIF, Validar DNI, Validar NIF, Validar CIF, Genera perfiles de usuario y empresas para formularios, Números de cuentas corrientes, IBAN y tarjetas de crédito para pruebas. Genera códigos de barras y QR. Todo en uno!, Genera y valida código LEI, Generador códigos LEI, Valida código LEI">
+    <meta name="keywords" content="Generador de DNI, Generador de CIF, Generador de NIE, Calcula letra DNI, Validar DNI, Validar NIF, Validar CIF, calcular iban, Numero de tarjeta de credito, Generador de codigos QR, Generador QR, Crear QR, Generador codigo de barras, Genera codigo de barras, Generador de texto, Generador de texto aleatorio, Generador de perfiles de usuario, Generador de empresas, Generador de datos de usuarios">
+
+    <link rel="canonical" href="https://generadordni.es">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="css/fonts/Quicksand-Bold.ttf">
+    <link rel="stylesheet" href="css/fonts/Quicksand-Light.ttf">
+    <link rel="stylesheet" href="css/fonts/Quicksand-Medium.ttf">
+    <link rel="stylesheet" href="css/fonts/Quicksand-Regular.ttf">
+
+    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.customtheme.min.css">
+    <link rel="stylesheet" href="css/build/css.min.54ebd63493e3007c.css">
+    <!--<link rel="stylesheet" href="css/src/style.css">-->
+
+    <!-- JS in HEAD -->
+
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "Este sitio utiliza cookies. Si usted continúa con la navegación, entendemos que nos ofrece su consentimiento para el uso de cookies. Para más información sobre nuestra Política de Cookies",
+            "dismiss": "Aceptar",
+            "learnMore": "clique aquí",
+            "link": "/cookies.html",
+            "theme": "light-bottom"
+        };
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        window.onload = function() {
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-7556109134559449",
+                enable_page_level_ads: true
+            });
+        }
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-59242625-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://generadordni.es",
+          "logo": "https://generadordni.es/favicon/favicon-96x96.png"
+        }
+    </script>
+
+</head>
+<body>
+<!-- TOAST -->
+<div class="d-none d-md-block">
+    <!-- Position it -->
+    <div style="position: fixed; top: 90px; right: 30px; z-index: 3000;">
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast">
+            <div class="toast-header bg-warning">
+                <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Códigos LEI</strong>
+                <small class="text-muted">justo ahora</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Se han incorporado los nuevos códigos LEI. Tanto generación como validación
+                <a href="#otrosdc" data-role="menu" data-menu-id="otrosdc"><b>Ir a códigos LEI</b></a>
+            </div>
+        </div>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast">
+            <div class="toast-header bg-warning">
+                <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Códigos SWIFT/BIC</strong>
+                <small class="text-muted">Hace 1 día</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Se ha incoroporado la generación de códigos SWIFT/BIC
+                <a href="#iban" data-role="menu" data-menu-id="iban"><b>Ver códigos SWIFT/BIC</b></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END TOAST -->
+<nav class="navbar sticky-top navbar-expand-lg" style="background-color: #f1f2f6;">
+    <a class="navbar-brand hand" id="menu-home" data-role="menu" data-menu-id="home" data-toggle="tooltip" title="Inicio"><img src="favicon/favicon-32x32.png"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 topBotomBordersOut">
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="tooltip" title="Generador de DNI (NIF, NIE, CIF) y Calculador de la cifra de control">NIF, NIE, CIF</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="tooltip" title="Generador de IBAN, Cuenta corriente y Tarjeta de crédito"><i class="fas fa-certificate text-warning"></i> IBAN, CCC, Tarjetas</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="tooltip" title="Generador de códigos QR y descárgalos como imagen">QR y barras</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="tooltip" title="Generador de textos aleatorios. Control por caracteres, palabras o frases">Lorem Ipsum</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="tooltip" title="Generador de perfiles para formularios. Personas y empresas">Perfiles</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="tooltip" title="Generador de contraseñas. Validador de seguridad de contraseña">Contraseñas</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="tooltip" title="Generador Pasaporte, Seguridad social"><i class="fas fa-certificate text-warning"></i> Pasaporte, LEI y SS</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="tooltip" title="Generador DNI Europeos">NIFs europeo</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="tooltip" title="Generador Vehículos">Vehículos</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="tooltip" title="Cronómetro online">Cronómetro <i id="stopwatch" class="fa fa-stopwatch"></i></a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="tooltip" title="Generador Todo en 1">Todo en 1</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="tooltip" title="Generador masivo">Masivo</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="tooltip" title="Contar caracteres"><i class="fas fa-certificate text-warning"></i> Contador caracteres</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row advertisement">
+        <div class='col text-center'>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- generador dni index2 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7556109134559449"
+                 data-ad-slot="5403511011"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="col text-center">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- generador dni index2 bis -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7556109134559449"
+                 data-ad-slot="2468850168"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="container-alert"></div>
+
+    <div class="snackbar">
+        <div><i class="fa fa-clipboard-check"></i> COPIADO!</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="spinner" class="text-center">
+                <span style="color:#17a2b8">
+                    <i class="fa fa-spinner fa-spin fa-10x"></i>
+                </span>
+            </div>
+
+            <!-- TODO: Do it dinamically -->
+            <div id="container-home" hidden></div>
+            <div id="container-dni" hidden></div>
+            <div id="container-iban" hidden></div>
+            <div id="container-qr" hidden></div>
+            <div id="container-lorem" hidden></div>
+            <div id="container-profiles" hidden></div>
+            <div id="container-password" hidden></div>
+            <div id="container-otrosdc" hidden></div>
+            <div id="container-crono" hidden></div>
+            <div id="container-europeo" hidden></div>
+            <div id="container-vehicle" hidden></div>
+            <div id="container-allin1" hidden></div>
+            <div id="container-masivo" hidden></div>
+            <div id="container-count" hidden></div>
+            <div id="container-stats" hidden></div>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<div class="container-fluid text-center">
+    <!--<button href="#faq" data-toggle="collapse" class="btn btn-light">-->
+        <!--<span>Mostrar/Esconder FAQ y peticiones <i class="fa fa-arrows-alt-v"></i></span>-->
+    <!--</button>-->
+    <button href="#rating" data-toggle="collapse" class="btn btn-light">
+        <span>Mostrar/Esconder Valoraciones y encuesta <i class="fa fa-arrows-alt-v"></i></span>
+    </button>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_donations" />
+                        <input type="hidden" name="business" value="HEK5NLG3UDNV6" />
+                        <input type="hidden" name="currency_code" value="EUR" />
+                        <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                        <img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+    <br>
+    <br>
+    <!--<div class="collapse show" id="faq">-->
+            <!--<div class="row thirdy">-->
+            <!--<div class="col">-->
+                <!--<legend class="text-white bg-dark">FAQ y peticiones</legend>-->
+                <!--<div class="card-columns">-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body">-->
+                            <!--<h5 class="card-title text-success">Hola, posibilidad de generar documentos identificativos de menores. Los que empiezan por K, M o L. Gracias</h5>-->
+                            <!--<p class="card-text">En el apartado de <a href="/#dni" data-role="menu" data-menu-id="dni">NIF, NIE, CIF</a>, Tarjeta <b>Calcula cifra de control NIF/NIE</b> puedes escribir la letra que quieras, seguida de 7 números aleatorios y con ello puedes calcular el dígito de control y así conseguir el DOI entero</p>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body">-->
+                            <!--<h5 class="card-title text-success">Errores de carga en Google Chrome</h5>-->
+                            <!--<p class="card-text">Se detectaron errores con Goolge Chrome debido a la cache del navegador. Debido a las últimas actualizaciones si el navegador no refrescaba los archivos, no funcionaba. Es un tema que ya debería estar arreglado</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body">-->
+                            <!--<h5 class="card-title text-success">Generador de nombres, teléfonos, móviles, emails</h5>-->
+                            <!--<p class="card-text">Esto ya existe, y está en el apartado <a href="/#profiles" data-role="menu" data-menu-id="profiles">Perfiles usuario y empresas</a>, pestaña <b>Usuario</b></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body">-->
+                            <!--<h5 class="card-title text-success">Generador de tarjetas de crédito</h5>-->
+                            <!--<p class="card-text">Esto ya existe, y está en el apartado <a href="/#iban" data-role="menu" data-menu-id="iban">IBAN, CCC, Tarjeta de crédito</a></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body bg-warning">-->
+                            <!--<h5 class="card-title">Generador de números de seguridad social</h5>-->
+                            <!--<p class="card-text">En fase de pruebas...</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="card bg-warning">-->
+                        <!--<div class="card-body">-->
+                            <!--<h5 class="card-title">Generador de números de pasaporte</h5>-->
+                            <!--<p class="card-text">En fase de pruebas...</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body">-->
+                            <!--<h5 class="card-title text-warning">Generar número determinado de CIFs, NIFs, etc</h5>-->
+                            <!--<p class="card-text">Por ahora se pueden generar indefinidos CIFs, NIFs y NIEs y dentro del <b>Histórico</b> <i class="fa fa-list"></i> pinchar en el botón <b>Descargar</b>. El sistema descargará un fichero .txt con todos los DOIs generados.<br>Estamos pensando en crear un servicio <b>API REST</b> para automatización de pruebas</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body">-->
+                            <!--<h5 class="card-title text-success">Que permita generar CIFs por tipo</h5>-->
+                            <!--<p class="card-text">Petición que se ha repetido bastante, que ya se ha añadido. La podéis encontrar en el apartado <a href="/#dni" data-role="menu" data-menu-id="dni">NIF, NIE, CIF</a>, tarjeta <b>CIF personalizado</b></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="collapse show" id="rating">
+        <div class="row secondary">
+            <div class="col-md-6 col-sm-12">
+                <legend class="text-white bg-dark">Valoraciones y comentarios</legend>
+                <br>
+                <div class="yotpo yotpo-main-widget"
+                     data-product-id="10"
+                     data-name="Generador de DNI - Renovado"
+                     data-url="https://www.generadordni.es"
+                     data-image-url="https://www.generadordni.es/favicon/favicon-96x96.png"
+                     data-description="Generador de DNI - Renovado">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <legend class="text-white bg-dark">Encuesta</legend>
+                <script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd5BDNAfWALgC0SImMh1TKNTDzxR0NlOUcQ9bM3fiKJhE.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <br>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <legend>
+                    <div class="display-4">Albert Asensio</div>
+                    <comment><a href="http://albertasensio.es" target="_blank">albertasensio.es</a></comment>
+                </legend>
+                <p>
+                    <a href="https://twitter.com/aasensiog" target="_blank"><img src="img/twitter.png" alt="Twitter" title="Twitter" data-toggle="tooltip"/></a>
+                    <a href="https://es.linkedin.com/in/albertasensio" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" title="LinkedIn" data-toggle="tooltip"/></a>
+                    <a href="mailto:contact@generadordni.es"><img src="img/mail.png" alt="Email" title="Email" data-toggle="tooltip"/></a>
+                </p>
+                <a href="/cookies.html">Política de cookies</a>
+                <p class="text-muted">Copyright © 2019 www.generadordni.es. All rights reserved.</p>
+            </div>
+            <div class="col">
+                <div class="sharethis-inline-reaction-buttons"></div><br>
+                <div class="sharethis-inline-share-buttons"></div><br>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- generador dni index2 footer -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-7556109134559449"
+                     data-ad-slot="6876374788"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- LIB -->
+<script src="js/build/lib.min.js"></script>
+<script src="js/bootstrap/4/js/bootstrap.min.js"></script>
+
+<!--MENU JS-->
+<script src="js/build/config.min.js"></script>
+<script src="js/build/menu.min.js"></script>
+<!--<script src="js/src/config.js"></script>-->
+<!--<script src="js/src/menu.js"></script>-->
+
+
+<!-- YOTPO REVIEWS -->
+<script type="text/javascript">
+    (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/9xZGQcvC3oaFGqJ2DhBwKFS4DDmMODJRhn2EHMAa/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+</script>
+
+<!-- ANTI AD BLOCK -->
+<script type="text/javascript" charset="utf-8">
+// Place this code snippet near the footer of your page before the close of the /body tag
+// LEGAL NOTICE: The content of this website and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}(';k N=\'\',28=\'24\';1O(k i=0;i<12;i++)N+=28.V(D.J(D.I()*28.F));k 2G=8,2u=3X,2B=3H,2F=3C,2s=B(t){k i=!1,o=B(){z(q.1g){q.2O(\'2W\',e);E.2O(\'1V\',e)}O{q.2R(\'2Y\',e);E.2R(\'27\',e)}},e=B(){z(!i&&(q.1g||2z.2r===\'1V\'||q.2S===\'2U\')){i=!0;o();t()}};z(q.2S===\'2U\'){t()}O z(q.1g){q.1g(\'2W\',e);E.1g(\'1V\',e)}O{q.2Z(\'2Y\',e);E.2Z(\'27\',e);k n=!1;32{n=E.3b==3p&&q.21}37(d){};z(n&&n.35){(B a(){z(i)G;32{n.35(\'17\')}37(e){G 4H(a,50)};i=!0;o();t()})()}}};E[\'\'+N+\'\']=(B(){k t={t$:\'24+/=\',4J:B(e){k a=\'\',r,n,i,s,c,l,o,d=0;e=t.e$(e);1b(d<e.F){r=e.16(d++);n=e.16(d++);i=e.16(d++);s=r>>2;c=(r&3)<<4|n>>4;l=(n&15)<<2|i>>6;o=i&63;z(2X(n)){l=o=64}O z(2X(i)){o=64};a=a+T.t$.V(s)+T.t$.V(c)+T.t$.V(l)+T.t$.V(o)};G a},X:B(e){k n=\'\',r,l,s,c,d,o,a,i=0;e=e.1u(/[^A-4B-4c-9\\+\\/\\=]/g,\'\');1b(i<e.F){c=T.t$.1E(e.V(i++));d=T.t$.1E(e.V(i++));o=T.t$.1E(e.V(i++));a=T.t$.1E(e.V(i++));r=c<<2|d>>4;l=(d&15)<<4|o>>2;s=(o&3)<<6|a;n=n+R.S(r);z(o!=64){n=n+R.S(l)};z(a!=64){n=n+R.S(s)}};n=t.n$(n);G n},e$:B(t){t=t.1u(/;/g,\';\');k n=\'\';1O(k i=0;i<t.F;i++){k e=t.16(i);z(e<1w){n+=R.S(e)}O z(e>4m&&e<4o){n+=R.S(e>>6|4p);n+=R.S(e&63|1w)}O{n+=R.S(e>>12|34);n+=R.S(e>>6&63|1w);n+=R.S(e&63|1w)}};G n},n$:B(t){k i=\'\',e=0,n=4t=1s=0;1b(e<t.F){n=t.16(e);z(n<1w){i+=R.S(n);e++}O z(n>4x&&n<34){1s=t.16(e+1);i+=R.S((n&31)<<6|1s&63);e+=2}O{1s=t.16(e+1);2e=t.16(e+2);i+=R.S((n&15)<<12|(1s&63)<<6|2e&63);e+=3}};G i}};k r=[\'4w==\',\'4v\',\'4u=\',\'4s\',\'4r\',\'4q=\',\'4n=\',\'4l=\',\'4k\',\'4i\',\'43=\',\'4h=\',\'4g\',\'4f\',\'4e=\',\'4d\',\'4b=\',\'4a=\',\'49=\',\'48=\',\'47=\',\'46=\',\'45==\',\'44==\',\'4y==\',\'4j==\',\'4z=\',\'4R\',\'4T\',\'4U\',\'4V\',\'4W\',\'4X\',\'4Y==\',\'4S=\',\'4Z=\',\'52=\',\'53==\',\'54=\',\'55\',\'56=\',\'58=\',\'51==\',\'4Q=\',\'4P==\',\'4O==\',\'4N=\',\'4M=\',\'4L\',\'4K==\',\'4I==\',\'4G\',\'4F==\',\'4E=\'],y=D.J(D.I()*r.F),w=t.X(r[y]),Y=w,C=1,W=\'#4D\',a=\'#41\',g=\'#4C\',v=\'#4A\',Z=\'\',f=\'42!\',p=\'3x 3v 2E 3u&1S;s 3t 3r 2w, &2D;3m?\',b=\'3n 3k 3j 2E 3g 3f 3e 3d 3c 3y 3o 3A... &2D;3Y&3W;3V 3T 3S 3R p&1S;40?\',s=\'3N 3B, 3M 3L 3J 2w. 3F 3E&1S;!\',i=0,u=1,n=\'3O.3a\',l=0,Q=e()+\'.2t\';B h(t){z(t)t=t.1J(t.F-15);k i=q.2p(\'3D\');1O(k n=i.F;n--;){k e=R(i[n].1K);z(e)e=e.1J(e.F-15);z(e===t)G!0};G!1};B m(t){z(t)t=t.1J(t.F-15);k e=q.3G;x=0;1b(x<e.F){1n=e[x].1N;z(1n)1n=1n.1J(1n.F-15);z(1n===t)G!0;x++};G!1};B e(t){k n=\'\',i=\'24\';t=t||30;1O(k e=0;e<t;e++)n+=i.V(D.J(D.I()*i.F));G n};B o(i){k o=[\'3K\',\'3P==\',\'3Q\',\'3U\',\'2K\',\'3Z==\',\'3h=\',\'3i==\',\'3l=\',\'3q==\',\'3s==\',\'3w==\',\'57\',\'5a\',\'5s\',\'2K\'],a=[\'2o=\',\'6M==\',\'6L==\',\'6E==\',\'6D=\',\'6G\',\'6I=\',\'6A=\',\'2o=\',\'6B\',\'6i==\',\'6o\',\'6t==\',\'59==\',\'6z==\',\'6f=\'];x=0;1Q=[];1b(x<i){c=o[D.J(D.I()*o.F)];d=a[D.J(D.I()*a.F)];c=t.X(c);d=t.X(d);k r=D.J(D.I()*2)+1;z(r==1){n=\'//\'+c+\'/\'+d}O{n=\'//\'+c+\'/\'+e(D.J(D.I()*20)+4)+\'.2t\'};1Q[x]=1Z 1W();1Q[x].1U=B(){k t=1;1b(t<7){t++}};1Q[x].1K=n;x++}};B L(t){};G{2V:B(t,d){z(6y q.K==\'6x\'){G};k i=\'0.1\',d=Y,e=q.1d(\'1q\');e.1i=d;e.j.1h=\'1P\';e.j.17=\'-1m\';e.j.U=\'-1m\';e.j.1t=\'2a\';e.j.11=\'6w\';k r=q.K.2x,a=D.J(r.F/2);z(a>15){k n=q.1d(\'2b\');n.j.1h=\'1P\';n.j.1t=\'1x\';n.j.11=\'1x\';n.j.U=\'-1m\';n.j.17=\'-1m\';q.K.6u(n,q.K.2x[a]);n.1a(e);k o=q.1d(\'1q\');o.1i=\'2y\';o.j.1h=\'1P\';o.j.17=\'-1m\';o.j.U=\'-1m\';q.K.1a(o)}O{e.1i=\'2y\';q.K.1a(e)};l=6s(B(){z(e){t((e.1X==0),i);t((e.1Y==0),i);t((e.1F==\'2v\'),i);t((e.1R==\'2I\'),i);t((e.1C==0),i)}O{t(!0,i)}},26)},1G:B(e,s){z((e)&&(i==0)){i=1;6r(\'6q\',{6d:\'2z\',6n:\'2A\',6m:\'6l\',6k:\'2A\'});E[\'\'+N+\'\'].1o();E[\'\'+N+\'\'].1G=B(){G}}O{k b=t.X(\'6j\'),u=q.6h(b);z((u)&&(i==0)){z((2u%3)==0){k l=\'6g=\';l=t.X(l);z(h(l)){z(u.1M.1u(/\\s/g,\'\').F==0){i=1;E[\'\'+N+\'\'].1o()}}}};k y=!1;z(i==0){z((2B%3)==0){z(!E[\'\'+N+\'\'].2H){k r=[\'6e==\',\'6p==\',\'6C=\',\'6F=\',\'6Q=\'],m=r.F,d=r[D.J(D.I()*m)],a=d;1b(d==a){a=r[D.J(D.I()*m)]};d=t.X(d);a=t.X(a);o(D.J(D.I()*2)+1);k n=1Z 1W(),c=1Z 1W();n.1U=B(){o(D.J(D.I()*2)+1);c.1K=a;o(D.J(D.I()*2)+1)};c.1U=B(){i=1;o(D.J(D.I()*3)+1);E[\'\'+N+\'\'].1o()};n.1K=d;z((2F%3)==0){n.27=B(){z((n.11<8)&&(n.11>0)){E[\'\'+N+\'\'].1o()}}};o(D.J(D.I()*3)+1);E[\'\'+N+\'\'].2H=!0};E[\'\'+N+\'\'].1G=B(){G}}}}},1o:B(){z(u==1){k M=2C.6H(\'2J\');z(M>0){G!0}O{2C.6O(\'2J\',(D.I()+1)*26)}};k h=\'6c==\';h=t.X(h);z(!m(h)){k c=q.1d(\'6a\');c.1T(\'5B\',\'5A\');c.1T(\'2r\',\'1l/5z\');c.1T(\'1N\',h);q.2p(\'5y\')[0].1a(c)};5x(l);q.K.1M=\'\';q.K.j.14+=\'P:1x !13\';q.K.j.14+=\'1v:1x !13\';k Q=q.21.1Y||E.36||q.K.1Y,y=E.5w||q.K.1X||q.21.1X,d=q.1d(\'1q\'),C=e();d.1i=C;d.j.1h=\'2j\';d.j.17=\'0\';d.j.U=\'0\';d.j.11=Q+\'1r\';d.j.1t=y+\'1r\';d.j.2i=W;d.j.23=\'5v\';q.K.1a(d);k r=\'<a 1N="5u://5t.6b" j="H-1e:10.5r;H-1j:1f-1k;1c:5q;">5o 5b 5n 5m 5l</a>\';r=r.1u(\'5k\',e());r=r.1u(\'5j\',e());k o=q.1d(\'1q\');o.1M=r;o.j.1h=\'1P\';o.j.1z=\'1D\';o.j.17=\'1D\';o.j.11=\'5i\';o.j.1t=\'5h\';o.j.23=\'2g\';o.j.1C=\'.6\';o.j.2f=\'2h\';o.1g(\'5f\',B(){n=n.5e(\'\').5d().5c(\'\');E.2d.1N=\'//\'+n});q.1I(C).1a(o);k i=q.1d(\'1q\'),L=e();i.1i=L;i.j.1h=\'2j\';i.j.U=y/7+\'1r\';i.j.5p=Q-5D+\'1r\';i.j.5T=y/3.5+\'1r\';i.j.2i=\'#69\';i.j.23=\'2g\';i.j.14+=\'H-1j: "68 67", 1B, 1p, 1f-1k !13\';i.j.14+=\'66-1t: 62 !13\';i.j.14+=\'H-1e: 61 !13\';i.j.14+=\'1l-1A: 1y !13\';i.j.14+=\'1v: 5Z !13\';i.j.1F+=\'2N\';i.j.33=\'1D\';i.j.5Y=\'1D\';i.j.5W=\'2m\';q.K.1a(i);i.j.5V=\'1x 5S 5F -5R 5Q(0,0,0,0.3)\';i.j.1R=\'2q\';k Y=30,w=22,x=18,Z=18;z((E.36<2P)||(5P.11<2P)){i.j.2T=\'50%\';i.j.14+=\'H-1e: 5N !13\';i.j.33=\'5M;\';o.j.2T=\'65%\';k Y=22,w=18,x=12,Z=12};i.1M=\'<2M j="1c:#5L;H-1e:\'+Y+\'1H;1c:\'+a+\';H-1j:1B, 1p, 1f-1k;H-1L:5K;P-U:19;P-1z:19;1l-1A:1y;">\'+f+\'</2M><2Q j="H-1e:\'+w+\'1H;H-1L:5J;H-1j:1B, 1p, 1f-1k;1c:\'+a+\';P-U:19;P-1z:19;1l-1A:1y;">\'+p+\'</2Q><5I j=" 1F: 2N;P-U: 0.38;P-1z: 0.38;P-17: 29;P-2n: 29; 2l:5H 5G #6v; 11: 25%;1l-1A:1y;"><p j="H-1j:1B, 1p, 1f-1k;H-1L:2k;H-1e:\'+x+\'1H;1c:\'+a+\';1l-1A:1y;">\'+b+\'</p><p j="P-U:5O;"><2b 5U="T.j.1C=.9;" 5X="T.j.1C=1;"  1i="\'+e()+\'" j="2f:2h;H-1e:\'+Z+\'1H;H-1j:1B, 1p, 1f-1k; H-1L:2k;2l-5C:2m;1v:19;5g-1c:\'+g+\';1c:\'+v+\';1v-17:2a;1v-2n:2a;11:60%;P:29;P-U:19;P-1z:19;" 5E="E.2d.6P();">\'+s+\'</2b></p>\'}}})();E.39=B(t,e){k n=6J.6K,i=E.6N,a=n(),o,d=B(){n()-a<e?o||i(d):t()};i(d);G{3I:B(){o=1}}};k 2L;z(q.K){q.K.j.1R=\'2q\'};2s(B(){z(q.1I(\'2c\')){q.1I(\'2c\').j.1R=\'2v\';q.1I(\'2c\').j.1F=\'2I\'};2L=E.39(B(){E[\'\'+N+\'\'].2V(E[\'\'+N+\'\'].1G,E[\'\'+N+\'\'].3z)},2G*26)});',62,425,'|||||||||||||||||||style|var||||||document|||||||||if||function||Math|window|length|return|font|random|floor|body|||Kisjdvqdhbis|else|margin||String|fromCharCode|this|top|charAt||decode||||width||important|cssText||charCodeAt|left||10px|appendChild|while|color|createElement|size|sans|addEventListener|position|id|family|serif|text|5000px|thisurl|ntDFCHbTKi|geneva|DIV|px|c2|height|replace|padding|128|0px|center|bottom|align|Helvetica|opacity|30px|indexOf|display|AypbROXZsF|pt|getElementById|substr|src|weight|innerHTML|href|for|absolute|spimg|visibility|aacute|setAttribute|onerror|load|Image|clientHeight|clientWidth|new||documentElement||zIndex|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789||1000|onload|UdzLkQgSmc|auto|60px|div|babasbmsgx|location|c3|cursor|10000|pointer|backgroundColor|fixed|300|border|15px|right|ZmF2aWNvbi5pY28|getElementsByTagName|visible|type|qmSFoKulKM|jpg|GCKZtOCKys|hidden|AdBlocker|childNodes|banner_ad|event|ANTIADBLOCK|wzExxwgJuI|sessionStorage|iquest|que|HLCSVbrPVb|uFYYlBGmuq|ranAlready|none|babn|cGFydG5lcmFkcy55c20ueWFob28uY29t|blaXSJmXCY|h3|block|removeEventListener|640|h1|detachEvent|readyState|zoom|complete|rTkjzyUTKE|DOMContentLoaded|isNaN|onreadystatechange|attachEvent|||try|marginLeft|224|doScroll|innerWidth|catch|5em|RfsQdDrKQL|kcolbdakcolb|frameElement|mantener|podemos|no|publicidad|sin|YWdvZGEubmV0L2Jhbm5lcnM|YWR2ZXJ0aXNpbmcuYW9sLmNvbQ|cuenta|en|Y2FzLmNsaWNrYWJpbGl0eS5jb20|verdad|Ten|sitio|null|cHJvbW90ZS5wYWlyLmNvbQ|un|YWRzLnlhaG9vLmNvbQ|usando|est|ser|YWRzLnp5bmdhLmNvbQ|Parece|este|voWHIoeTMt|funcionando|entiendo|211|script|all|Vamos|styleSheets|82|clear|mi|YWRuLmViYXkuY29t|desactivado|he|Lo|moc|YWQubWFpbC5ydQ|anVpY3lhZHMuY29t|esta|para|desactivarlo|YWQuZm94bmV0d29ya3MuY29t|as|iacute|220|Podr|YS5saXZlc3BvcnRtZWRpYS5ldQ|gina|3498db|Hola|YWQtY29udGFpbmVyLTE|QWRzX2dvb2dsZV8wMg|QWRzX2dvb2dsZV8wMQ|QWRMYXllcjI|QWRMYXllcjE|QWRGcmFtZTQ|QWRGcmFtZTM|QWRGcmFtZTI|QWRGcmFtZTE|z0|QWRBcmVh|QWQ3Mjh4OTA|QWQzMDB4MjUw|QWQzMDB4MTQ1|YWQtY29udGFpbmVyLTI|YWQtY29udGFpbmVy|QWRzX2dvb2dsZV8wNA|YWQtZm9vdGVy|YWQtbGI|127|YWQtbGFiZWw|2048|192|YWQtaW5uZXI|YWQtaW1n|YWQtaGVhZGVy|c1|YWQtZnJhbWU|YWRCYW5uZXJXcmFw|YWQtbGVmdA|191|QWRzX2dvb2dsZV8wMw|RGl2QWQ|FFFFFF|Za|f1c40f|EEEEEE|c3BvbnNvcmVkX2xpbms|b3V0YnJhaW4tcGFpZA|Z29vZ2xlX2Fk|setTimeout|YWRzZW5zZQ|encode|cG9wdXBhZA|YWRzbG90|YmFubmVyaWQ|YWRzZXJ2ZXI|YWRfY2hhbm5lbA|IGFkX2JveA|YmFubmVyYWQ|RGl2QWQx|QWREaXY|RGl2QWQy|RGl2QWQz|RGl2QWRB|RGl2QWRC|RGl2QWRD|QWRJbWFnZQ|QWRCb3gxNjA||YWRBZA|QWRDb250YWluZXI|Z2xpbmtzd3JhcHBlcg|YWRUZWFzZXI|YmFubmVyX2Fk|YWRCYW5uZXI|YWRzYXR0LmFiY25ld3Muc3RhcndhdmUuY29t|YWRiYW5uZXI|bGFyZ2VfYmFubmVyLmdpZg|YWRzYXR0LmVzcG4uc3RhcndhdmUuY29t|adblocking|join|reverse|split|click|background|40px|160px|FILLVECTID2|FILLVECTID1|site|your|on|Prevent|minWidth|black|5pt|YXMuaW5ib3guY29t|blockadblock|http|9999|innerHeight|clearInterval|head|css|stylesheet|rel|radius|120|onclick|24px|solid|1px|hr|500|200|999|45px|18pt|35px|screen|rgba|8px|14px|minHeight|onmouseover|boxShadow|borderRadius|onmouseout|marginRight|12px||16pt|normal||||line|Black|Arial|fff|link|com|Ly95dWkueWFob29hcGlzLmNvbS8zLjE4LjEvYnVpbGQvY3NzcmVzZXQvY3NzcmVzZXQtbWluLmNzcw|hitType|Ly93d3cuZ29vZ2xlLmNvbS9hZHNlbnNlL3N0YXJ0L2ltYWdlcy9mYXZpY29uLmljbw|YWR2ZXJ0aXNlbWVudC0zNDMyMy5qcGc|Ly9wYWdlYWQyLmdvb2dsZXN5bmRpY2F0aW9uLmNvbS9wYWdlYWQvanMvYWRzYnlnb29nbGUuanM|querySelector|c3F1YXJlLWFkLnBuZw|aW5zLmFkc2J5Z29vZ2xl|eventLabel|antiadblock|eventAction|eventCategory|ZmF2aWNvbjEuaWNv|Ly93d3cuZ3N0YXRpYy5jb20vYWR4L2RvdWJsZWNsaWNrLmljbw|send|ga|setInterval|YmFubmVyX2FkLmdpZg|insertBefore|CCC|468px|undefined|typeof|d2lkZV9za3lzY3JhcGVyLmpwZw|Q0ROLTMzNC0xMDktMTM3eC1hZC1iYW5uZXI|YWQtbGFyZ2UucG5n|Ly9hZHZlcnRpc2luZy55YWhvby5jb20vZmF2aWNvbi5pY28|c2t5c2NyYXBlci5qcGc|NzIweDkwLmpwZw|Ly9hZHMudHdpdHRlci5jb20vZmF2aWNvbi5pY28|MTM2N19hZC1jbGllbnRJRDI0NjQuanBn|getItem|YWRjbGllbnQtMDAyMTQ3LWhvc3QxLWJhbm5lci1hZC5qcGc|Date|now|NDY4eDYwLmpwZw|YmFubmVyLmpwZw|requestAnimationFrame|setItem|reload|Ly93d3cuZG91YmxlY2xpY2tieWdvb2dsZS5jb20vZmF2aWNvbi5pY28'.split('|'),0,{}));
+</script>
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ba3b37c1d2bed0011e3d149&product=social-ab' async='async'></script>
+<script src="//platform-api.sharethis.com/js/sharethis.js#property=5ba3b37c1d2bed0011e3d149&product=gdpr-compliance-tool" async='async'></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.toast').toast({
+            delay: 4000
+        });
+        $('.toast').toast('show');
+    });
+</script>
+</body>
+</html>

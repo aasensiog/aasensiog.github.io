@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/src/css.min.css">
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/cookieconsent.min.js"></script>
+
+    <script type="text/javascript">
+        window.cookieconsent_options = {"message":"Este sitio utiliza cookies. Si usted continúa con la navegación, entendemos que nos ofrece su consentimiento para el uso de cookies. Para más información sobre nuestra Política de Cookies","dismiss":"Aceptar","learnMore":"clique aquí","link":"/cookies.html","theme":"light-bottom"};
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59242625-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</head>
+<body>
+    <div class="container">
+        <br><br><br><br><br><br><br><br><br><br>
+		<div class="row">
+			<div class='col-md-12 text-center'>
+                <h2>Error 404. Ups! Parece que has encontrado un enlace roto</h2>
+                <p>
+                    Parece que alguna cosa no fue bien o que la página a la que has accedido ya no existe
+                </p>
+                <p>
+                    Si tienes alguna duda, contacta con nosotros por favor
+                </p>
+                <a href="mailto:me@albertasensio.es"><img alt="Email" title="Email" src="img/mail.png"/></a>
+
+                <br><br>
+                <a class="btn btn-primary" href="/"><i class="glyphicon glyphicon-backward"></i> Volver atrás</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

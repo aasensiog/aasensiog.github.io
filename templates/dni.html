@@ -1,0 +1,198 @@
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+    ¿Sabías que el pasado mes de Marzo se generaron <b>3.014.460 NIF</b>, <b>1.576.164 CIF</b> y <b>1.354.668 NIE</b>?
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="card-deck">
+    <div class="card border-info">
+            <div class="card-header">
+                <span class="text-info"><b>Genera NIF</b></span>
+            </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_nif" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_nif'></span>
+                    </span>
+                </div>
+                <a href="#historial_nif_collapsible" data-toggle="collapse" class="historial hand">
+                    <i data-toggle="tooltip" title="Mostrar/Esconder historial" class="fas fa-history"></i>
+                </a>
+            </div>
+            <div class="collapse" id="historial_nif_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_nif" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_nif" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_nif" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif' data-toggle="tooltip" title="Genera otro">
+                NIF <i class="fa fa-redo"></i>
+            </button>
+        </div>
+
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera NIE</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                <span class="albert copy_html hand" data-clipboard-target="#result_nie" data-toggle="tooltip" title="Click para copiar">
+                    <span id='result_nie'></span>
+                </span>
+                </div>
+                <a href="#historial_nie_collapsible" data-toggle="collapse" class="historial hand">
+                    <i class="fas fa-history" data-toggle="tooltip" title="Mostrar/Esconder historial"></i> </a>
+
+            </div>
+            <div class="collapse" id="historial_nie_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_nie" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_nie" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_nie" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='nie' data-toggle="tooltip" title="Genera otro">
+                NIE <i class="fa fa-redo"></i>
+            </button>
+        </div>
+
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera CIF</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_cif" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_cif'></span>
+                    </span>
+                </div>
+                <a href="#historial_cif_collapsible" data-toggle="collapse" class="historial hand">
+                    <i class="fas fa-history" data-toggle="tooltip" title="Mostrar/Esconder historial"></i>
+                </a>
+            </div>
+            <div class="collapse" id="historial_cif_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_cif" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_cif" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_cif" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='cif' data-toggle="tooltip" title="Genera otro">
+                CIF <i class="fa fa-redo"></i>
+            </button>
+        </div>
+
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera CIF personalizado</b></span>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <select class="form-control" id='cif_organismo'>
+                    <option value='A' selected>A: Sociedad Anónima</option>
+                    <option value='B'>B: Sociedad de responsabilidad limitada</option>
+                    <option value='C'>C: Sociedad colectiva</option>
+                    <option value='D'>D: Sociedad comanditaria</option>
+                    <option value='E'>E: Comunidad de bienes y herencias yacentes</option>
+                    <option value='F'>F: Sociedad cooperativa</option>
+                    <option value='G'>G: Asociaciones</option>
+                    <option value='H'>H: Comunidad de propietarios en régimen de propiedad horizontal</option>
+                    <option value='J'>J: Sociedades Civiles, con o sin personalidad jurídica</option>
+                    <option value='K'>K: Formato antiguo, en desuso</option>
+                    <option value='L'>L: Formato antiguo, en desuso</option>
+                    <option value='M'>M: Formato antiguo, en desuso</option>
+                    <option value='N'>N: Entidades extranjeras</option>
+                    <option value='P'>P: Corporación local</option>
+                    <option value='Q'>Q: Organismo públicos</option>
+                    <option value='R'>R: Congregaciones e Instituciones Religiosas</option>
+                    <option value='S'>S: Organos de la Administración del Estado y Comunidades Autónomas</option>
+                    <option value='U'>U: Uniones temporales de Empresas</option>
+                    <option value='V'>V: Otros tipos no definidos en el resto de claves</option>
+                    <option value='W'>W: Establecimientos permanentes de entidades no residentes en España</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" id='result_custom_cif'>
+            </div>
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info" id='custom_cif' data-toggle="tooltip" title="Genera CIF">CIF <i class="fa fa-redo"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#result_custom_cif" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+            </div>
+
+            <p id="custom_cif_error" class="text-danger"></p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Valida DOI</b></span>
+        </div>
+        <div class="card-body">
+            <input type="text" class="form-control" id='valida' maxlength='9' title="Valida NIF, NIE o CIF" placeholder="Ej. 12345678Z">
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info" id='valida_btn' title="Valida DOI" data-toggle="tooltip">Valida <i class="fa fa-check"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#valida" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+            </div>
+
+            <p id="valida_error" class="text-danger"></p>
+            <p id="valida_res" class="text-info text-center"></p>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Calcula cifra de control NIF/NIE</b></span>
+        </div>
+        <div class="card-body">
+            <input type="text" class="form-control" id='cifra_control' maxlength='8' title="Calcula NIF/NIE" placeholder="Ej. 12345678">
+            <span class="text-muted"><i class="fa fa-question-circle"></i> <i>Los 8 primeros caracteres del NIF/NIE</i></span>
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info" id='cifra_control_btn' title="Calcula dígito de control" data-toggle="tooltip">Cifra control <i class="fa fa-redo"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#cifra_control" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+            </div>
+
+            <p id="cifra_control_error" class="text-danger"></p>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Calcula cifra de control CIF</b></span>
+        </div>
+        <div class="card-body">
+
+            <input type="text" class="form-control" id='cifra_control_cif' maxlength='8' title="Calcula CIF" placeholder="Ej. J0378695">
+            <span class="text-muted"><i class="fa fa-question-circle"></i> <i>Los 8 primeros caracteres del CIF</i></span>
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info" id='cifra_control_cif_btn' title="Calcula dígito de control" data-toggle="tooltip">CIF <i class="fa fa-redo"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#cifra_control_cif" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+            </div>
+            <p id="cifra_control_cif_error" class="text-danger"></p>
+        </div>
+    </div>
+
+</div>

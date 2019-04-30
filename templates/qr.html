@@ -1,0 +1,212 @@
+<div class="card border-info">
+    <div class="card-header">
+        <span class="text-info"><b>Genera códigos</b></span>
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="qr-tab" data-toggle="tab" href="#qr" role="tab" aria-controls="qr" aria-selected="true">QR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="barcode-tab" data-toggle="tab" href="#barcode" role="tab" aria-controls="barcode" aria-selected="false">Barras</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="qr" role="tabpanel" aria-labelledby="qr-tab">
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="text-center" id="qr_container" title="Pincha para descargar como imagen" data-toggle="tooltip">
+                                <span id="qrcode"></span>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <label for="text">Introduce o pega el texto:</label>
+                            <input type="text" class="form-control" id="text">
+
+                            <div class="form-group">
+                                <label for="sizeqr">Tamaño: <b><span class="text-info" id="size_label"></span></b></label>
+                                <input type="range" class="form-control" id="sizeqr"
+                                       min="100"
+                                       max="200"
+                                       step="10"
+                                       value="120">
+                            </div>
+                            <div class="btn-group expand_all" role="group">
+                                <button class="btn btn-outline-info btn-lg" id="download_qr"><i class="fa fa-download"></i> Descargar imagen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="barcode" role="tabpanel" aria-labelledby="barcode-tab">
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <div class="text-center">
+                                <div id="barcode_container" title="Pincha para descargar como imagen" data-toggle="tooltip">
+                                    <canvas id="barcode_output"></canvas>
+                                </div>
+                                <span id="invalid">El texto no es válido para el tipo de código escogido</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="simple" checked>
+                        <label class="form-check-label" for="gridRadios1">Simple</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="multiple">
+                        <label class="form-check-label" for="gridRadios2">Múltiple</label>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="row search-bar">
+                                <div class="col">
+                                    <input class="form-control" id="barcode_input" type="text" value="1234" placeholder="Texto del código">
+                                    <textarea class="form-control" id="barcode_textarea" type="text" value="1234" rows="4" hidden="hidden" placeholder="Un código por fila"></textarea>
+                                    <div class="btn-group expand_all" role="group">
+                                        <button class="btn btn-outline-info" id="download_barcode"><i class="fa fa-download"></i> Descargar imagen</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="barcodeType">Tipo de código:</label>
+                                    <select class="form-control" id="barcodeType" title="CODE128">
+                                        <option value="CODE128">CODE128 auto</option>
+                                        <option value="CODE128A">CODE128 A</option>
+                                        <option value="CODE128B">CODE128 B</option>
+                                        <option value="CODE128C">CODE128 C</option>
+                                        <option value="EAN13">EAN13</option>
+                                        <option value="EAN8">EAN8</option>
+                                        <option value="UPC">UPC</option>
+                                        <option value="CODE39">CODE39</option>
+                                        <option value="ITF14">ITF14</option>
+                                        <option value="ITF">ITF</option>
+                                        <option value="MSI">MSI</option>
+                                        <option value="MSI10">MSI10</option>
+                                        <option value="MSI11">MSI11</option>
+                                        <option value="MSI1010">MSI1010</option>
+                                        <option value="MSI1110">MSI1110</option>
+                                        <option value="pharmacode">Pharmacode</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Bar width -->
+                            <div class="row">
+                                <div class="col">
+                                    <label for="bar-width">Anchura de la barra:</label>
+                                    <input id="bar-width" data-role="redraw" type="range" min="1" max="4" step="1" value="2" class="form-control"/>
+                                    <span id="bar-width-display"></span>
+                                </div>
+                            </div>
+                            <!-- Height -->
+                            <div class="row">
+                                <div class="col">
+                                    <label for="bar-height">Altura de la barra:</label>
+                                    <input id="bar-height" data-role="redraw" type="range" min="10" max="150" step="5" value="60" class="form-control"/>
+                                    <span id="bar-height-display"></span>
+                                </div>
+                            </div>
+                            <!-- Margin -->
+                            <div class="row">
+                                <div class="col">
+                                    <label for="bar-margin">Margen:</label>
+                                    <input id="bar-margin" data-role="redraw" type="range" min="0" max="25" step="1" value="10" class="form-control"/>
+                                    <span id="bar-margin-display"></span>
+                                </div>
+                            </div>
+                            <!-- Background (color) -->
+                            <div class="row">
+                                <div class="col">
+                                    <label for="background-color">Color del fondo:</label>
+                                    <input id="background-color" data-role="redraw" class="form-control" value="#FFFFFF"/>
+                                </div>
+                            </div>
+                            <!-- Line color -->
+                            <div class="row">
+                                <div class="col">
+                                    <label for="line-color">Color de las barras:</label>
+                                    <input id="line-color" data-role="redraw" class="form-control" value="#000000"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <!-- Show text -->
+                            <div class="row checkbox-options">
+                                <div class="col">
+                                    <label>Mostrar el texto:</label>
+                                    <div class="btn-group expand_all" role="toolbar">
+                                        <button type="button" class="btn btn-info display-text" value="true">Mostrar</button>
+                                        <button type="button" class="btn display-text" value="false">Ocultar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="font-options">
+                                <!-- Text align -->
+                                <div class="row checkbox-options">
+                                    <div class="col">
+                                        <label>Alineación del texto:</label>
+                                        <div class="btn-group btn-group-md expand_all" role="toolbar">
+                                            <button type="button" class="btn btn-default text-align" value="left" title="Izquierda" data-toggle="tooltip"><i class="fa fa-align-left"></i></button>
+                                            <button type="button" class="btn btn-default btn-info text-align" value="center" title="Centro" data-toggle="tooltip"><i class="fa fa-align-center"></i></button>
+                                            <button type="button" class="btn btn-default text-align" value="right" title="Derecha" data-toggle="tooltip"><i class="fa fa-align-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Font -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Fuente:</label>
+                                        <select class="form-control" id="font" style="font-family: monospace" data-role="redraw">
+                                            <option value="monospace" style="font-family: monospace" selected="selected">Monospace</option>
+                                            <option value="sans-serif" style="font-family: sans-serif">Sans-serif</option>
+                                            <option value="serif" style="font-family: serif">Serif</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Font options -->
+                                <div class="row checkbox-options">
+                                    <div class="col">
+                                        <label>Opciones de fuente:</label>
+                                        <div class="btn-group btn-group-md expand_all" role="toolbar">
+                                            <button type="button" class="btn btn-default font-option" value="bold" style="font-weight: bold">Negrita</button>
+                                            <button type="button" class="btn btn-default font-option" value="italic" style="font-style: italic">Cursiva</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Font size -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="bar-fontSize">Tamaño de la fuente:</label>
+                                        <input id="bar-fontSize" data-role="redraw" type="range" min="8" max="36" step="1" value="20" class="form-control"/>
+                                        <span id="bar-fontSize-display"></span>
+                                    </div>
+                                </div>
+                                <!-- Text margin -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="bar-text-margin">Margen entre texto y código:</label>
+                                        <input id="bar-text-margin" data-role="redraw" type="range" min="-15" max="40" step="1" value="0" class="form-control"/>
+                                        <span id="bar-text-margin-display"></span>
+                                    </div>
+                                </div>
+                            </div> <!-- font options -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

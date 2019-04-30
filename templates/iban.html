@@ -1,0 +1,147 @@
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera CCC</b></span>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <input type="text" class="form-control" id='result_ccc' title="Genera CCC"/>
+                <input type="text" class="form-control" id='result_ccc_2' hidden="hidden"/>
+            </div>
+            <a href="#historial_ccc_collapsible" data-toggle="collapse" class="historial hand"><i class="fas fa-history" data-toggle="tooltip" title="Mostrar/Esconder historial"></i> </a>
+            <div class="collapse" id="historial_ccc_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_ccc" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_ccc" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <!--<button id="download_ccc" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                </div>
+            </div>
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info copy" title="Copiar con separadores" data-clipboard-target="#result_ccc" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar sin separadores" data-clipboard-target="#result_ccc_2" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info" id='ccc' data-toggle="tooltip" title="Genera otro"><i class="fa fa-redo"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera IBAN</b></span>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <input type="text" class="form-control" id='result_iban' title="Genera IBAN">
+                <input type="text" class="form-control" hidden id='result_iban_2'>
+            </div>
+            <a href="#historial_iban_collapsible" data-toggle="collapse" class="historial hand"><i class="fas fa-history" data-toggle="tooltip" title="Mostrar/Esconder historial"></i> </a>
+            <div class="collapse" id="historial_iban_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_iban" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_iban" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <!--<button id="download_ccc" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                </div>
+            </div>
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info copy" title="Copiar con separadores" data-clipboard-target="#result_iban" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar sin separadores" data-clipboard-target="#result_iban_2" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info" id='iban' data-toggle="tooltip" title="Genera otro"><i class="fa fa-redo"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera Tarjeta de crédito</b></span>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <select class="form-control" id="tipo_tarjeta">
+                    <option value="4" selected="selected">Visa</option>
+                    <option value="5">Mastercard</option>
+                    <option value="3">American Express</option>
+                    <option value="6">Discover</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" id='result_tarjeta' title="Genera tarjeta">
+            </div>
+
+            <a href="#historial_tarjeta_collapsible" data-toggle="collapse" class="historial hand"><i class="fas fa-history" data-toggle="tooltip" title="Mostrar/Esconder historial"></i> </a>
+            <div class="collapse" id="historial_tarjeta_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_tarjeta" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_tarjeta" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <!--<button id="download_ccc" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                </div>
+            </div>
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#result_tarjeta" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info" id='tarjeta' data-toggle="tooltip" title="Genera otro"><i class="fa fa-redo"></i></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Calcula el IBAN de un CCC</b></span>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <input type="text" class="form-control" id='calcula_iban' title="Calcula IBAN" maxlength="20" placeholder="Número de cuenta corriente">
+                <input type="text" class="form-control" hidden id='calcula_iban_2'>
+            </div>
+            <p class="text-muted"><i class="fa fa-question-circle"></i> <i>Introduce el número de cuenta corriente</i></p>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info copy" title="Copiar con separadores" data-clipboard-target="#calcula_iban" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar sin separadores" data-clipboard-target="#calcula_iban_2" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info" id='iban_btn'>Calcula IBAN <i class="fa fa-redo"></i></button>
+            </div>
+            <p id="iban_error" class="text-danger"></p>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Calcula el dígito de control (DC)</b></span>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <input type="text" class="form-control" id='cod_banco' maxlength="20" placeholder="BBBB-SSSS-DC-CCCCCCCCCC">
+                <input type="text" class="form-control" hidden id='calcula_dc_con'>
+                <input type="text" class="form-control" hidden id='calcula_dc_sin'>
+            </div>
+            <p class="text-muted"><i class="fa fa-question-circle"></i> <i>Introduce el número de cuenta corriente</i></p>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info copy" title="Copiar con separadores" data-clipboard-target="#calcula_dc_con" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar sin separadores" data-clipboard-target="#calcula_dc_sin" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info" id='calc_dc_btn'>Calcula DC <i class="fa fa-redo"></i></button>
+            </div>
+            <p id="calc_dc_error" class="text-danger"></p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card-deck d-md-none d-lg-block">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Por banco</b></span>
+            <button id="mas_bancos" class="btn btn-info float-right" title="Genera nuevos" data-toggle="tooltip"><i class="fa fa-redo"></i> Regenera</button>
+        </div>
+        <div class="card-body">
+            <table class="table" id="codigos_bancarios_espanya"></table>
+
+        </div>
+    </div>
+</div>

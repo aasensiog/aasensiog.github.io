@@ -1,0 +1,55 @@
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Contar caracteres</b></span>
+        </div>
+        <div class="card-body">
+            <!--<div class="row">-->
+                <!--<div class="col-md-12">-->
+                    <!--<textarea class="form-control" id="text" rows="8" autofocus></textarea>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-12">-->
+                    <!--<div class="input-group input-group-lg">-->
+                        <!--<input type="text" class="form-control" id='result_count'>-->
+                        <!--<span class="input-group-btn">-->
+                            <!--<button class="btn btn-md btn-default coloranimation copy" title="Copiar longitud" data-clipboard-target="#result_count" data-toggle="tooltip"><span class="glyphicon glyphicon-copy"></span> Copiar longitud</button>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="row">
+                <div class="col-md-8">
+                    <textarea class="form-control" id="text" rows="8" autofocus maxlength="999999"></textarea>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" id='result_count'>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-lg btn-outline-info copy" title="Copiar longitud" data-clipboard-target="#result_count" data-toggle="tooltip"><i class="fa fa-copy"></i> Copiar longitud</button>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="btn-group expand_all" role="group">
+                                <button class="btn btn-outline-info btn-lg copy" data-clipboard-target="#text" data-toggle="tooltip" title="Click para copiar"><i class="fa fa-copy"></i> Copiar texto</button>
+                                <button id="clean_text_btn" class="btn btn-outline-danger btn-lg pull-right" title="Click para limpiar el texto"><i class="fa fa-trash"></i> Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+        </div>
+    </div>
+</div>

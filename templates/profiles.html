@@ -1,0 +1,257 @@
+<div class="row checkbox-options ">
+    <div class="col-md-12">
+        <!--<label>Estilo del texto:</label>-->
+        <div class="btn-group btn-group-md expand_all" role="toolbar">
+            <button type="button" class="btn btn-default btn-info text-style" value="upper" title="MAYÚSCULAS" data-toggle="tooltip">MAYÚSCULAS</button>
+            <button type="button" class="btn btn-default text-style" value="lower" title="minúsculas" data-toggle="tooltip">minúsculas</button>
+            <button type="button" class="btn btn-default text-style" value="camel" title="Camel Case" data-toggle="tooltip">Camel Case</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card border-info">
+    <div class="card-header">
+        <span class="text-info"><b>Perfiles</b></span>
+        <button id="nuevo_perfil" class="btn btn-info float-right" title="Genera otro" data-toggle="tooltip"><i class="fa fa-redo"></i> Nuevo perfil</button>
+    </div>
+    <div class="card-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="usuario-tab" data-toggle="tab" href="#usuario" role="tab" aria-controls="usuario" aria-selected="true">Usuario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="empresa-tab" data-toggle="tab" href="#empresa" role="tab" aria-controls="empresa" aria-selected="false">Empresa</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="usuario" role="tabpanel" aria-labelledby="usuario-tab">
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class='col-sm-6 col-lg-3'>
+                                <label class="col-form-label">DOI</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_nif" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_nif'></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-3'>
+                                <label class="col-form-label">Nombre</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_nombre" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_nombre' class="text-style-res"></span>
+                                </span>
+                            </div>
+
+                            <div class='col-sm-6 col-lg-3'>
+                                <label class="col-form-label">Primer apellido</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_apellido1" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_apellido1' class="text-style-res"></span>
+                                </span>
+                            </div>
+
+                            <div class='col-sm-6 col-lg-3'>
+                                <label class="col-form-label">Segundo apellido</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_apellido2" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_apellido2' class="text-style-res"></span>
+                                </span>
+                            </div>
+
+                            <div class='col-sm-12 col-lg-6'>
+                                <label class="col-form-label">Nombre completo</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_nombre_completo" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_nombre_completo' class="text-style-res"></span>
+                                </span>
+                            </div>
+
+                            <div class='col-sm-12 col-lg-3'>
+                                <label class="col-form-label">Apellidos</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_apellidos_completos" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_apellidos_completos' class="text-style-res"></span>
+                                </span>
+                            </div>
+
+                            <div class='col-sm-12 col-lg-3'>
+                                <label class="col-form-label">Fecha de nacimiento</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_fecha_nacimiento" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-birthday-cake"></i> <span id='result_profile_fecha_nacimiento'></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <label class="col-form-label">Email</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_email" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-envelope"></i> <span id='result_profile_email'></span>
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <label class="col-form-label">Teléfono</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_telefono" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-mobile-alt"></i> <span id='result_profile_telefono'></span>
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <label class="col-form-label">Seguridad social</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_ssn" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_ssn'></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <label class="col-form-label">Dirección</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_direccion" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-home"></i> <span id='result_profile_direccion' class="text-style-res"></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <label class="col-form-label">CP</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_codigo_postal" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_codigo_postal'></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <label class="col-form-label">Municipio</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_municipio" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_municipio' class="text-style-res"></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <label class="col-form-label">Provincia</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_provincia" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_provincia' class="text-style-res"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="col-form-label">Nombre de usuario</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_username" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-user"></i> <span id='result_profile_username'></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="col-form-label">Contraseña</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_password" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-lock"></i> <span id='result_profile_password'></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-4">
+                                <label class="col-form-label">Número de tarjeta</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_tarjeta" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-credit-card"></i> <span id='result_profile_tarjeta'></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <label class="col-form-label">Caducidad</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_tarjeta_fecha" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_tarjeta_fecha'></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <label class="col-form-label">CVV</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_tarjeta_cvc" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_tarjeta_cvc'></span>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <label class="col-form-label">IBAN</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_iban" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-piggy-bank "></i> <span id='result_profile_iban'></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="empresa" role="tabpanel" aria-labelledby="empresa-tab">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">CIF</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_cif" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_cif'></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">Razón social</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_razon_social" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_razon_social' class="text-style-res"></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">Fecha constitución</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_fecha_constitucion" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_fecha_constitucion'></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">CNAE</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_cnae" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_cnae'></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-12 col-lg-8'>
+                                <label class="col-form-label">Actividad</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_actividad" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_actividad'></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">Email</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_email_empresa" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-envelope"></i> <span id='result_profile_email_empresa'></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">Teléfono</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_telefono_empresa" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-phone"></i> <span id='result_profile_telefono_empresa'></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">Fax</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_fax_empresa" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-fax"></i> <span id='result_profile_fax_empresa'></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class='col-sm-6 col-lg-4'>
+                                <label class="col-form-label">Dirección</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_direccion_empresa" data-toggle="tooltip" title="Click para copiar">
+                                    <i class="fa fa-building"></i> <span id='result_profile_direccion_empresa' class="text-style-res"></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-2'>
+                                <label class="col-form-label">CP</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_codigo_postal_empresa" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_codigo_postal_empresa'></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-3'>
+                                <label class="col-form-label">Municipio</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_municipio_empresa" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_municipio_empresa' class="text-style-res"></span>
+                                </span>
+                            </div>
+                            <div class='col-sm-6 col-lg-3'>
+                                <label class="col-form-label">Provincia</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_provincia_empresa" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_provincia_empresa' class="text-style-res"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!--</section>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
