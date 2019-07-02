@@ -1,133 +1,619 @@
-<div class="card-deck">
-     <!-- AUSTRIA -->
-    <div class="card border-info">
-        <div class="card-header">
-            <i class="fa fa-flag"></i> <span class="text-info"><b>AUSTRIA</b></span>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-11 col-sm-12">
-                    <span class="albert copy_html hand" data-clipboard-target="#result_nif_at" data-toggle="tooltip" title="Click para copiar">
-                        <span id='result_nif_at'></span>
-                    </span>
-                </div>
-                <a href="#historial_nif_at_collapsible" data-toggle="collapse" class="historial hand">
-                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
-                        <i class="fas fa-history"></i>
-                    </span>
-                </a>
-            </div>
+<div class="card-deck" id="res"></div>
+<!--<div class="card-deck">-->
 
-            <div class="collapse" id="historial_nif_at_collapsible">
-                <br>
-                <p>Historial:</p>
-                <ul id="historial_nif_at" class="col_historic">
-                </ul>
-                <div class="row justify-content-md-center">
-                    <button id="clean_historic_nif_at" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
-                    <button id="download_nif_at" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
-                </div>
-            </div>
-            <hr>
-            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_at' data-toggle="tooltip" title="Genera otro">
-                DNI Austria <i class="fa fa-redo"></i>
-            </button>
-        </div>
-        <div class="card-footer">
-            <i class="fa fa-info"></i> Formato: <b>UNNNNNNNC</b>
-            <ul class="list-group">
-                <li class="list-group-item"><b>'U'</b></li>
-                <li class="list-group-item"><b>NNNNNNN</b>: 7 dígitos</li>
-                <li class="list-group-item"><b>C</b>: 1 dígito de control</li>
-            </ul>
-        </div>
-    </div> <!-- AUSTRIA -->
+    <!--&lt;!&ndash; ALEMANIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-de"></span> <span class="text-info"><b>ALEMANIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-9 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_de" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_de'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<div class="col-md-3 col-sm-12">-->
+                    <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_de' data-toggle="tooltip" title="Genera otro">-->
+                        <!--<i class="fa fa-redo"></i>-->
+                    <!--</button>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_de_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
 
-    <!-- BELGICA -->
-    <div class="card border-info">
-        <div class="card-header">
-            <i class="fa fa-flag"></i> <span class="text-info"><b>BÉLGICA</b></span>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-11 col-sm-12">
-                    <span class="albert copy_html hand" data-clipboard-target="#result_nif_be" data-toggle="tooltip" title="Click para copiar">
-                        <span id='result_nif_be'></span>
-                    </span>
-                </div>
-                <a href="#historial_nif_be_collapsible" data-toggle="collapse" class="historial hand">
-                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
-                        <i class="fas fa-history"></i>
-                    </span>
-                </a>
-            </div>
+            <!--<div class="collapse" id="historial_nif_de_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_de" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_de" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_de" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNNC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNN</b>: 8 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
 
-            <div class="collapse" id="historial_nif_be_collapsible">
-                <br>
-                <p>Historial:</p>
-                <ul id="historial_nif_be" class="col_historic">
-                </ul>
-                <div class="row justify-content-md-center">
-                    <button id="clean_historic_nif_be" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
-                    <button id="download_nif_be" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
-                </div>
-            </div>
-            <hr>
-            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_be' data-toggle="tooltip" title="Genera otro">
-                DNI Bélgica <i class="fa fa-redo"></i>
-            </button>
-        </div>
-        <div class="card-footer">
-            <i class="fa fa-info"></i> Formato: <b>NNNNNNNNDC</b>
-            <ul class="list-group">
-                <li class="list-group-item"><b>NNNNNNNN</b>: 8 dígitos</li>
-                <li class="list-group-item"><b>DC</b>: 2 dígitos de control</li>
-            </ul>
-        </div>
-    </div> <!-- BELGICA -->
+     <!--&lt;!&ndash; AUSTRIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-at"></span> <span class="text-info"><b>AUSTRIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_at" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_at'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_at_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
 
-    <!-- ITALIA -->
-    <div class="card border-info">
-        <div class="card-header">
-            <i class="fa fa-flag"></i> <span class="text-info"><b>ITALIA</b></span>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-11 col-sm-12">
-                    <span class="albert copy_html hand" data-clipboard-target="#result_nif_it" data-toggle="tooltip" title="Click para copiar">
-                        <span id='result_nif_it'></span>
-                    </span>
-                </div>
-                <a href="#historial_nif_it_collapsible" data-toggle="collapse" class="historial hand">
-                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
-                        <i class="fas fa-history"></i>
-                    </span>
-                </a>
-            </div>
+            <!--<div class="collapse" id="historial_nif_at_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_at" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_at" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_at" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_at' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Austria <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>UNNNNNNNC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>'U'</b></li>-->
+                <!--<li class="list-group-item"><b>NNNNNNN</b>: 7 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
 
-            <div class="collapse" id="historial_nif_it_collapsible">
-                <br>
-                <p>Historial:</p>
-                <ul id="historial_nif_it" class="col_historic">
-                </ul>
-                <div class="row justify-content-md-center">
-                    <button id="clean_historic_nif_it" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
-                    <button id="download_nif_it" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
-                </div>
-            </div>
-            <hr>
-            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_it' data-toggle="tooltip" title="Genera otro">
-                DNI Italia <i class="fa fa-redo"></i>
-            </button>
-        </div>
-        <div class="card-footer">
-            <i class="fa fa-info"></i> Formato: <b>NNNNNNNNNNC</b>
-            <ul class="list-group">
-                <li class="list-group-item"><b>NNNNNNNNNN</b>: 10 dígitos</li>
-                <li class="list-group-item"><b>C</b>: 1 dígito de control</li>
-            </ul>
-        </div>
-    </div>
+    <!--&lt;!&ndash; BELGICA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-be"></span> <span class="text-info"><b>BÉLGICA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_be" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_be'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_be_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_be_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_be" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_be" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_be" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_be' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Bélgica <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNNCC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNN</b>: 8 dígitos</li>-->
+                <!--<li class="list-group-item"><b>CC</b>: 2 dígitos de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; BULGARIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-bg"></span> <span class="text-info"><b>BULGARIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_bg" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_bg'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_bg_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_bg_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_bg" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_bg" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_bg" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_bg' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Bulgaria <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNNNC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNN</b>: 9 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; DINAMARCA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-dk"></span> <span class="text-info"><b>DINAMARCA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_dk" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_dk'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_dk_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_dk_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_dk" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_dk" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_dk" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_dk' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Dinamarca <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNN</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNN</b>: 8 dígitos</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<div class="card-deck">-->
+
+    <!--&lt;!&ndash; FINLANDIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-fi"></span> <span class="text-info"><b>FINLANDIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_fi" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_fi'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_fi_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_fi_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_fi" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_fi" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_fi" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_fi' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Finlandia <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNN</b>: 7 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; GRECIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-gr"></span> <span class="text-info"><b>GRECIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_gr" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_gr'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_gr_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_gr_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_gr" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_gr" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_gr" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_gr' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Grecia <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNC o NNNNNNNNC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNN o NNNNNNNN</b>: 7 o 8 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; IRLANDA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-ie"></span> <span class="text-info"><b>IRLANDA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_ie" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_ie'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_ie_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_ie_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_ie" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_ie" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_ie" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_ie' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Irlanda <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNN</b>: 7 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; ITALIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-it"></span> <span class="text-info"><b>ITALIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_it" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_it'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_it_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_it_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_it" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_it" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_it" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_it' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Italia <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNNNNC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNNNNN</b>: 10 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; SUECIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-se"></span> <span class="text-info"><b>SUECIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_se" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_se'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_se_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_se_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_se" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_se" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_se" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_se' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Suecia <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNNNCNN</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNN</b>: 9 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+                <!--<li class="list-group-item"><b>NN</b>: 2 dígitos</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<div class="card-deck">-->
+
+    <!--&lt;!&ndash; LUXEMBURGO &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-lu"></span> <span class="text-info"><b>LUXEMBURGO</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_lu" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_lu'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_lu_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_lu_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_lu" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_lu" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_lu" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_lu' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Luxemburgo <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNCC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNN</b>: 6 dígitos</li>-->
+                <!--<li class="list-group-item"><b>CC</b>: 1 o 2 dígitos de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; MALTA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-mt"></span> <span class="text-info"><b>MALTA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_mt" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_mt'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_mt_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_mt_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_mt" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_mt" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_mt" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_mt' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Malta <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNCC</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNN</b>: 6 dígitos</li>-->
+                <!--<li class="list-group-item"><b>CC</b>: 1 o 2 dígitos de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; HOLANDA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-nl"></span> <span class="text-info"><b>HOLANDA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_nl" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_nl'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_nl_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_nl_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_nl" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_nl" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_nl" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_nl' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Holanda <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNNCBNN</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNN</b>: 8 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+                <!--<li class="list-group-item"><b>'B'</b>: caracter B</li>-->
+                <!--<li class="list-group-item"><b>NN</b>: 2 dígitos</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; POLONIA &ndash;&gt;-->
+    <!--<div class="card border-info">-->
+        <!--<div class="card-header">-->
+            <!--<span class="flag-icon flag-icon-pl"></span> <span class="text-info"><b>POLONIA</b></span>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-11 col-sm-12">-->
+                    <!--<span class="albert copy_html hand" data-clipboard-target="#result_nif_pl" data-toggle="tooltip" title="Click para copiar">-->
+                        <!--<span id='result_nif_pl'></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<a href="#historial_nif_pl_collapsible" data-toggle="collapse" class="historial hand">-->
+                    <!--<span data-toggle="tooltip" title="Mostrar/Esconder historial">-->
+                        <!--<i class="fas fa-history"></i>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="collapse" id="historial_nif_pl_collapsible">-->
+                <!--<br>-->
+                <!--<p>Historial:</p>-->
+                <!--<ul id="historial_nif_pl" class="col_historic">-->
+                <!--</ul>-->
+                <!--<div class="row justify-content-md-center">-->
+                    <!--<button id="clean_historic_nif_pl" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>-->
+                    <!--<button id="download_nif_pl" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr>-->
+            <!--<button class="btn btn-lg btn-outline-info btn-block pull-right" id='nif_pl' data-toggle="tooltip" title="Genera otro">-->
+                <!--DNI Polonia <i class="fa fa-redo"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--<div class="card-footer">-->
+            <!--Formato: <b>NNNNNNNNCBNN</b><i class="fa fa-info collapsador hand float-right"></i>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>NNNNNNNNN</b>: 9 dígitos</li>-->
+                <!--<li class="list-group-item"><b>C</b>: 1 dígito de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; En construccion &ndash;&gt;-->
     <!--<div class="card border-info">-->
         <!--<div class="card-header">-->
             <!--<i class="fa fa-flag"></i> <span class="text-info"><i>En construcción...</i></span>-->
@@ -138,5 +624,9 @@
             <!--<br>-->
             <!--<i class="fa fa-cog fa-spin"></i>-->
         <!--</div>-->
-    <!--</div> &lt;!&ndash; En construccion &ndash;&gt;-->
-</div>
+    <!--</div>-->
+
+<!--</div>-->
+
+
+

@@ -33,7 +33,41 @@
                 Matrícula <i class="fa fa-redo"></i>
             </button>
         </div>
-    </div> <!-- BELGICA -->
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <i class="fa fa-motorcycle"></i> <span class="text-info"><b>Matrícula Ciclomotor</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_matricula_ciclo" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_matricula_ciclo'></span>
+                    </span>
+                </div>
+                <a href="#historial_matricula_ciclo_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_matricula_ciclo_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_matricula_ciclo" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_matricula_ciclo" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_matricula_ciclo" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='matricula_ciclo' data-toggle="tooltip" title="Genera otro">
+                Matrícula ciclomotor <i class="fa fa-redo"></i>
+            </button>
+        </div>
+    </div>
     <div class="card border-info">
         <div class="card-header">
             <i class="fa fa-car"></i> <span class="text-info"><b>Bastidor</b></span>
@@ -67,16 +101,5 @@
                 Bastidor <i class="fa fa-redo"></i>
             </button>
         </div>
-    </div> <!-- ITALIA -->
-    <div class="card border-info">
-        <div class="card-header">
-            <i class="fa fa-flag"></i> <span class="text-info"><i>En construcción...</i></span>
-        </div>
-        <div class="card-body text-center">
-            Seguimos trabajando para añadir más documentos
-            <br>
-            <br>
-            <i class="fa fa-cog fa-spin"></i>
-        </div>
-    </div> <!-- En construccion -->
+    </div>
 </div>

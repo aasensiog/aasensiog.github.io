@@ -22,6 +22,9 @@
             <li class="nav-item">
                 <a class="nav-link" id="empresa-tab" data-toggle="tab" href="#empresa" role="tab" aria-controls="empresa" aria-selected="false">Empresa</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" id="exportar-tab" data-toggle="tab" href="#exportar" role="tab" aria-controls="exportar" aria-selected="false"><i class="fas fa-certificate text-warning"></i> Exportar</a>
+            </li>
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="usuario" role="tabpanel" aria-labelledby="usuario-tab">
@@ -78,7 +81,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-3 col-sm-6">
                                 <label class="col-form-label">Email</label>
                                 <span class="albert copy_html hand" data-clipboard-target="#result_profile_email" data-toggle="tooltip" title="Click para copiar">
                                     <i class="fa fa-envelope"></i> <span id='result_profile_email'></span>
@@ -88,6 +91,13 @@
                                 <label class="col-form-label">Teléfono</label>
                                 <span class="albert copy_html hand" data-clipboard-target="#result_profile_telefono" data-toggle="tooltip" title="Click para copiar">
                                     <i class="fa fa-mobile-alt"></i> <span id='result_profile_telefono'></span>
+                                </span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <label class="col-form-label">Pasaporte</label>
+                                <span class="albert copy_html hand" data-clipboard-target="#result_profile_pasaporte" data-toggle="tooltip" title="Click para copiar">
+                                    <span id='result_profile_pasaporte'></span>
                                 </span>
                             </div>
                             <div class="col-md-3 col-sm-6">
@@ -251,6 +261,75 @@
                         <!--</section>-->
                     </div>
                 </div>
+            </div>
+             <div class="tab-pane fade" id="exportar" role="tabpanel" aria-labelledby="exportar-tab">
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="perfil_exportar_doc">Tipo de documento</label>
+                        <select class="form-control" id="perfil_exportar_doc">
+                            <option value="perfil_usuario">Perfil de usuario</option>
+                            <option value="perfil_empresa">Perfil de empresa</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="perfil_exportar_quantity">Cantidad (máximo: 100)</label>
+                        <input type="number" class="form-control" max="100" id="perfil_exportar_quantity" value="10"/>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="perfil_exportar_exportar">&nbsp;</label>
+                        <button class="btn btn-outline-info btn-block" id="perfil_exportar_exportar"><i class="fa fa-redo"></i> Exportar</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal_perfil_exportar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Exportar perfiles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label" for="perfil_exportar_filename">Nombre del fichero:</label>
+                        <input class="form-control" id="perfil_exportar_filename" placeholder="mifichero" autofocus="autofocus"/>
+                        <span class="text-muted">El sistema añade automáticamente la extensión</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label" for="perfil_exportar_format">Formato:</label>
+                        <select class="form-control" id="perfil_exportar_format">
+                            <option value="json">.json</option>
+                            <option value="xml">.xml</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!-- generadordni_modal_descarga -->
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- generadordni modal -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-7556109134559449"
+                             data-ad-slot="1224987302"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-info" id="perfil_exportar_download" data-dismiss="modal">Generar y Descargar</button>
             </div>
         </div>
     </div>

@@ -44,7 +44,82 @@
 
     <link rel="stylesheet" href="css/bootstrap/4/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap/4/bootstrap.customtheme.min.css">
-    <link rel="stylesheet" href="css/build/css.min.54ebd63493e3007c.css">
+    <link rel="stylesheet" href="css/build/css.min.css">
+
+    <style>
+        .qc-cmp-button,
+        .qc-cmp-button.qc-cmp-secondary-button:hover {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-button:hover,
+        .qc-cmp-button.qc-cmp-secondary-button {
+            background-color: transparent !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-alt-action,
+        .qc-cmp-link {
+            color: #000000 !important;
+        }
+        .qc-cmp-button,
+        .qc-cmp-button.qc-cmp-secondary-button:hover {
+            color: #ffffff !important;
+        }
+        .qc-cmp-button:hover,
+        .qc-cmp-button.qc-cmp-secondary-button {
+            color: #000000 !important;
+        }
+        .qc-cmp-small-toggle,
+        .qc-cmp-toggle {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-main-messaging,
+		.qc-cmp-messaging,
+		.qc-cmp-sub-title,
+		.qc-cmp-privacy-settings-title,
+		.qc-cmp-purpose-list,
+		.qc-cmp-tab,
+		.qc-cmp-title,
+		.qc-cmp-vendor-list,
+		.qc-cmp-vendor-list-title,
+		.qc-cmp-enabled-cell,
+		.qc-cmp-toggle-status,
+		.qc-cmp-table,
+		.qc-cmp-table-header {
+    		color: #000000 !important;
+		}
+
+        .qc-cmp-ui {
+  			background-color: #ffffff !important;
+		}
+
+		.qc-cmp-table,
+		.qc-cmp-table-row {
+			  border: 1px solid !important;
+			  border-color: #000000 !important;
+		}
+    #qcCmpButtons a {
+            text-decoration: none !important;
+
+    }
+
+    #qcCmpButtons button {
+        margin-top: 65px;
+    }
+
+
+  @media screen and (min-width: 851px) {
+    #qcCmpButtons a {
+            position: absolute;
+            bottom: 10%;
+            left: 60px;
+    }
+  }
+  .qc-cmp-qc-link-container{
+    display:none;
+  }
+    </style>
     <!--<link rel="stylesheet" href="css/src/style.css">-->
 
     <!-- JS in HEAD -->
@@ -100,30 +175,30 @@
 <div class="d-none d-md-block">
     <!-- Position it -->
     <div style="position: fixed; top: 90px; right: 30px; z-index: 3000;">
+        <!--<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">-->
+            <!--<div class="toast-header bg-warning">-->
+                <!--<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> NIF europeos</strong>-->
+                <!--<small class="text-muted">Hace pocos días</small>-->
+                <!--<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">-->
+                    <!--<span aria-hidden="true">&times;</span>-->
+                <!--</button>-->
+            <!--</div>-->
+            <!--<div class="toast-body">-->
+                <!--Se ha incorporado la generación de NIF de países de europa-->
+                <!--<a href="#europeo" data-role="menu" data-menu-id="europeo"><b>Ir NIFs europeos</b></a>-->
+            <!--</div>-->
+        <!--</div>-->
         <div role="alert" aria-live="assertive" aria-atomic="true" class="toast">
             <div class="toast-header bg-warning">
-                <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Códigos LEI</strong>
-                <small class="text-muted">justo ahora</small>
+                <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Exportación JSON y XML de perfiles de usuario y empresa</strong>
+                <small class="text-muted">Justo ahora</small>
                 <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="toast-body">
-                Se han incorporado los nuevos códigos LEI. Tanto generación como validación
-                <a href="#otrosdc" data-role="menu" data-menu-id="otrosdc"><b>Ir a códigos LEI</b></a>
-            </div>
-        </div>
-        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast">
-            <div class="toast-header bg-warning">
-                <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Códigos SWIFT/BIC</strong>
-                <small class="text-muted">Hace 1 día</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="toast-body">
-                Se ha incoroporado la generación de códigos SWIFT/BIC
-                <a href="#iban" data-role="menu" data-menu-id="iban"><b>Ver códigos SWIFT/BIC</b></a>
+                En el apartado de perfiles, hay una nueva opción para importar los perfiles en formato JSON y XML.
+                <a href="#profiles" data-role="menu" data-menu-id="profiles"><b>Ver perfiles</b></a>
             </div>
         </div>
     </div>
@@ -132,24 +207,24 @@
 <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #f1f2f6;">
     <a class="navbar-brand hand" id="menu-home" data-role="menu" data-menu-id="home" data-toggle="tooltip" title="Inicio"><img src="favicon/favicon-32x32.png"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 topBotomBordersOut">
             <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="tooltip" title="Generador de DNI (NIF, NIE, CIF) y Calculador de la cifra de control">NIF, NIE, CIF</a></li>
-            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="tooltip" title="Generador de IBAN, Cuenta corriente y Tarjeta de crédito"><i class="fas fa-certificate text-warning"></i> IBAN, CCC, Tarjetas</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="tooltip" title="Generador de IBAN, Cuenta corriente y Tarjeta de crédito">IBAN, CCC, Tarjetas</a></li>
             <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="tooltip" title="Generador de códigos QR y descárgalos como imagen">QR y barras</a></li>
             <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="tooltip" title="Generador de textos aleatorios. Control por caracteres, palabras o frases">Lorem Ipsum</a></li>
-            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="tooltip" title="Generador de perfiles para formularios. Personas y empresas">Perfiles</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="tooltip" title="Generador de perfiles para formularios. Personas y empresas"><i class="fas fa-certificate text-warning"></i> Perfiles</a></li>
             <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="tooltip" title="Generador de contraseñas. Validador de seguridad de contraseña">Contraseñas</a></li>
-            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="tooltip" title="Generador Pasaporte, Seguridad social"><i class="fas fa-certificate text-warning"></i> Pasaporte, LEI y SS</a></li>
-            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="tooltip" title="Generador DNI Europeos">NIFs europeo</a></li>
-            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="tooltip" title="Generador Vehículos">Vehículos</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="tooltip" title="Generador Pasaporte, Seguridad social"> Pasaporte, LEI y SS</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="tooltip" title="Generador DNI Europeos">NIFs europeos</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="tooltip" title="Generador Vehículos"> Vehículos</a></li>
             <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="tooltip" title="Cronómetro online">Cronómetro <i id="stopwatch" class="fa fa-stopwatch"></i></a></li>
             <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="tooltip" title="Generador Todo en 1">Todo en 1</a></li>
             <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="tooltip" title="Generador masivo">Masivo</a></li>
-            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="tooltip" title="Contar caracteres"><i class="fas fa-certificate text-warning"></i> Contador caracteres</a></li>
+            <li class="nav-item nav-item-nav"><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="tooltip" title="Contar caracteres">Contador caracteres</a></li>
         </ul>
     </div>
 </nav>
@@ -327,11 +402,11 @@
                     <comment><a href="http://albertasensio.es" target="_blank">albertasensio.es</a></comment>
                 </legend>
                 <p>
-                    <a href="https://twitter.com/aasensiog" target="_blank"><img src="img/twitter.png" alt="Twitter" title="Twitter" data-toggle="tooltip"/></a>
-                    <a href="https://es.linkedin.com/in/albertasensio" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" title="LinkedIn" data-toggle="tooltip"/></a>
-                    <a href="mailto:contact@generadordni.es"><img src="img/mail.png" alt="Email" title="Email" data-toggle="tooltip"/></a>
+                    <a href="https://twitter.com/aasensiog" target="_blank"><i class="fab fa-twitter fa-2x" alt="Twitter" title="Twitter" data-toggle="tooltip"></i></a>
+                    <a href="https://es.linkedin.com/in/albertasensio" target="_blank"><i class="fab fa-linkedin-in fa-2x" alt="LinkedIn" title="LinkedIn" data-toggle="tooltip"></i></a>
+                    <a href="mailto:contact@generadordni.es"><i class="fas fa-envelope fa-2x" alt="Email" title="Email" data-toggle="tooltip"></i></a>
                 </p>
-                <a href="/cookies.html">Política de cookies</a>
+                <a href="cookies.html">Política de cookies</a>
                 <p class="text-muted">Copyright © 2019 www.generadordni.es. All rights reserved.</p>
             </div>
             <div class="col">
@@ -385,5 +460,85 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         $('.toast').toast('show');
     });
 </script>
+<script type="text/javascript" async=true >
+    var elem = document.createElement('script');
+    elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    (function() {
+    var gdprAppliesGlobally = false;
+    function addFrame() {
+        if (!window.frames['__cmpLocator']) {
+        if (document.body) {
+            var body = document.body,
+                iframe = document.createElement('iframe');
+            iframe.style = 'display:none';
+            iframe.name = '__cmpLocator';
+            body.appendChild(iframe);
+        } else {
+            setTimeout(addFrame, 5);
+        }
+        }
+    }
+    addFrame();
+    function cmpMsgHandler(event) {
+        var msgIsString = typeof event.data === "string";
+        var json;
+        if(msgIsString) {
+        json = event.data.indexOf("__cmpCall") != -1 ? JSON.parse(event.data) : {};
+        } else {
+        json = event.data;
+        }
+        if (json.__cmpCall) {
+        var i = json.__cmpCall;
+        window.__cmp(i.command, i.parameter, function(retValue, success) {
+            var returnMsg = {"__cmpReturn": {
+            "returnValue": retValue,
+            "success": success,
+            "callId": i.callId
+            }};
+            event.source.postMessage(msgIsString ?
+            JSON.stringify(returnMsg) : returnMsg, '*');
+        });
+        }
+    }
+    window.__cmp = function (c) {
+        var b = arguments;
+        if (!b.length) {
+        return __cmp.a;
+        }
+        else if (b[0] === 'ping') {
+        b[2]({"gdprAppliesGlobally": gdprAppliesGlobally,
+            "cmpLoaded": false}, true);
+        } else if (c == '__cmp')
+        return false;
+        else {
+        if (typeof __cmp.a === 'undefined') {
+            __cmp.a = [];
+        }
+        __cmp.a.push([].slice.apply(b));
+        }
+    }
+    window.__cmp.gdprAppliesGlobally = gdprAppliesGlobally;
+    window.__cmp.msgHandler = cmpMsgHandler;
+    if (window.addEventListener) {
+        window.addEventListener('message', cmpMsgHandler, false);
+    }
+    else {
+        window.attachEvent('onmessage', cmpMsgHandler);
+    }
+    })();
+    window.__cmp('init', {
+    		'Language': 'es',
+		'Initial Screen Body Text Option': 1,
+		'Publisher Name': 'Moneytizer',
+		'Default Value for Toggles': 'on',
+		'UI Layout': 'banner',
+		'No Option': false
+    });
+</script>
+
 </body>
 </html>
