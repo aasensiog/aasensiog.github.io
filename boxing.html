@@ -75,8 +75,21 @@
                 <button class="btn btn-primary btn-lg" id="start_btn">Start work!</button>
             </div>
             <div id="work">
-                <h2 id="movement"></h2>
-                <legend><progress id='progressBar' value="0" max="180" id="progressBar"></progress></legend>
+                <div class="row">
+                    <div class="col-6"><h4 id="text_round_left" class="float-left"></h4></div>
+                    <div class="col-6"><h4 id="text_round_right" class="float-right"></h4></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2 id="text_movement" class="text-danger"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <h3 id="text_countdown"></h3>
+                        <progress id='progressBar' value="0" max="180"></progress></div>
+                </div>
+
             </div>
             <div class="text-center">
                 <canvas id="canvas" width="400" height="800" style="border:1px solid #d3d3d3;"></canvas>
