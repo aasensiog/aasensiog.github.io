@@ -23,13 +23,57 @@
     <link rel="stylesheet" href="css/bootstrap/4/bootstrap.customtheme.min.css">
     <link rel="stylesheet" href="css/build/css.min.css">
 
+    <!--<style>-->
+        <!--canvas {-->
+            <!--background-image: url('img/boxer.png');-->
+        <!--}-->
+    <!--</style>-->
 </head>
 <body>
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col text-center">
-            <h2 id="movement"></h2>
-            <legend><progress id='progressBar' value="0" max="180" id="progressBar"></progress></legend>
+            <div id="pre">
+                <label>Rounds</label>
+                <div class="btn-group btn-group-md expand_all" role="toolbar">
+                    <button type="button" class="btn btn-default rounds" value="1">1</button>
+                    <button type="button" class="btn btn-default rounds" value="2">2</button>
+                    <button type="button" class="btn btn-default btn-info rounds" value="3">3</button>
+                    <button type="button" class="btn btn-default rounds" value="4">4</button>
+                    <button type="button" class="btn btn-default rounds" value="5">5</button>
+                    <button type="button" class="btn btn-default rounds" value="6">6</button>
+                    <button type="button" class="btn btn-default rounds" value="7">7</button>
+                    <button type="button" class="btn btn-default rounds" value="8">8</button>
+                    <button type="button" class="btn btn-default rounds" value="9">9</button>
+                    <button type="button" class="btn btn-default rounds" value="10">10</button>
+                </div>
+                <label>Minutes round</label>
+                <div class="btn-group btn-group-md expand_all" role="toolbar">
+                    <button type="button" class="btn btn-default minutes_round" value="1">1</button>
+                    <button type="button" class="btn btn-default minutes_round" value="2">2</button>
+                    <button type="button" class="btn btn-default btn-info minutes_round" value="3">3</button>
+                </div>
+                <label>Time between rounds</label>
+                <div class="btn-group btn-group-md expand_all" role="toolbar">
+                    <button type="button" class="btn btn-default seconds_rest_between_rounds" value="15">15s</button>
+                    <button type="button" class="btn btn-default seconds_rest_between_rounds" value="30">30s</button>
+                    <button type="button" class="btn btn-default btn-info seconds_rest_between_rounds" value="60">1min</button>
+                    <button type="button" class="btn btn-default seconds_rest_between_rounds" value="120">2min</button>
+                </div>
+                <label>Time before start</label>
+                <div class="btn-group btn-group-md expand_all" role="toolbar">
+                    <button type="button" class="btn btn-default seconds_before_start" value="30">30s</button>
+                    <button type="button" class="btn btn-default seconds_before_start" value="60">1min</button>
+                    <button type="button" class="btn btn-default seconds_before_start btn-info" value="120">2min</button>
+                    <button type="button" class="btn btn-default seconds_before_start" value="180">3min</button>
+                    <button type="button" class="btn btn-default seconds_before_start" value="300">5min</button>
+                </div>
+                <button class="btn btn-primary" id="start_btn">Start</button>
+            </div>
+            <div id="work">
+                <h2 id="movement"></h2>
+                <legend><progress id='progressBar' value="0" max="180" id="progressBar"></progress></legend>
+            </div>
             <div class="text-center">
                 <canvas id="canvas" width="400" height="800" style="border:1px solid #d3d3d3;"></canvas>
             </div>
@@ -40,5 +84,4 @@
 <!-- LIB -->
 <script src="js/build/lib.min.js"></script>
 <script src="js/bootstrap/4/js/bootstrap.min.js"></script>
-<script src="js/build/menu.min.js"></script>
 <script src="js/build/boxing/app.min.js"></script>
