@@ -129,7 +129,6 @@
     </div>
     <!-- END TOAST -->
 
-
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div class="sidebar-header">
@@ -164,12 +163,17 @@
 
 <!-- Page Content  -->
     <div id="content">
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
-            <i class="fas fa-bars"></i>
-            <span>Menú</span>
-        </button>
-        <br>
-        <br>
+        <div class="row">
+            <div class="col-2">
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-bars text-white"></i>
+                    <!--<span>Menú</span>-->
+                </button>
+            </div>
+            <div class="col-10">
+                <h1 id="title" class="float-right text-info"></h1>
+            </div>
+        </div>
         <div class="row advertisement">
             <div class='col text-center'>
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -201,10 +205,6 @@
 
         <br>
 
-        <!--<button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i></button>-->
-
-        <br>
-
         <div id="container-alert"></div>
 
         <div class="snackbar text-center">
@@ -214,27 +214,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="spinner" class="text-center">
-                    <span style="color:#17a2b8">
-                        <i class="fa fa-spinner fa-spin fa-10x"></i>
+                    <span class="text-info">
+                        <i class="fas fa-spinner fa-10x"></i>
                     </span>
                 </div>
 
-                <!-- TODO: Do it dinamically -->
-                <div id="container-home" hidden></div>
-                <div id="container-dni" hidden></div>
-                <div id="container-iban" hidden></div>
-                <div id="container-qr" hidden></div>
-                <div id="container-lorem" hidden></div>
-                <div id="container-profiles" hidden></div>
-                <div id="container-password" hidden></div>
-                <div id="container-otrosdc" hidden></div>
-                <div id="container-crono" hidden></div>
-                <div id="container-europeo" hidden></div>
-                <div id="container-vehicle" hidden></div>
-                <div id="container-allin1" hidden></div>
-                <div id="container-masivo" hidden></div>
-                <div id="container-count" hidden></div>
-                <div id="container-stats" hidden></div>
+                <div id="containers"></div>
+
             </div>
         </div>
 
