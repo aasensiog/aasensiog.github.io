@@ -96,6 +96,40 @@
 <div class="card-deck">
     <div class="card border-info">
         <div class="card-header">
+            <span class="text-info"><b>IBAN personalizado</b></span>
+        </div>
+        <div class="card-body">
+            <div class="input-group">
+                <input type="string" class="form-control" id="codigo_entidad" name="codigo_entidad" placeholder="Entidad (Ej. 0081)" pattern="[1-9]{4}" maxlength="4"/>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" id='result_iban_personalizado' title="Genera IBAN personalizado">
+                <input type="text" class="form-control" hidden id='result_iban_personalizado_2'>
+
+            </div>
+
+            <a href="#historial_iban_personalizado_collapsible" data-toggle="collapse" class="historial hand"><i class="fas fa-history" data-toggle="tooltip" title="Mostrar/Esconder historial"></i> </a>
+            <div class="collapse" id="historial_iban_personalizado_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_iban_personalizado" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_iban_personalizado" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <!--<button id="download_ccc" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>-->
+                </div>
+            </div>
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info copy" title="Copiar con separadores" data-clipboard-target="#result_iban_personalizado" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar sin separadores" data-clipboard-target="#result_iban_personalizado_2" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info" id='iban_personalizado' data-toggle="tooltip" title="Genera otro"><i class="fa fa-redo"></i></button>
+            </div>
+            <p id="iban_personalizado_error" class="text-danger"></p>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
             <span class="text-info"><b>Calcula el IBAN de un CCC</b></span>
         </div>
         <div class="card-body">
