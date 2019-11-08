@@ -109,7 +109,7 @@
 <div class="card-deck">
     <div class="card border-info">
         <div class="card-header">
-            <span class="text-info"><b>Genera código LEI</b> <i class="fas fa-certificate text-warning"></i></span>
+            <span class="text-info"><b>Genera código LEI</b></span>
         </div>
         <div class="card-body">
             <div class="row">
@@ -152,7 +152,7 @@
     </div>
     <div class="card border-info">
         <div class="card-header">
-            <span class="text-info"><b>Valida código LEI</b> <i class="fas fa-certificate text-warning"></i></span>
+            <span class="text-info"><b>Valida código LEI</b></span>
         </div>
         <div class="card-body">
             <input type="text" class="form-control" id='valida_lei' maxlength='20' title="Valida Código LEI" placeholder="Ej. 959800UZ2BLYJBAOU646">
@@ -164,6 +164,77 @@
 
             <p id="valida_lei_error" class="text-danger"></p>
             <p id="valida_lei_res" class="text-info text-center"></p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera código CUPS luz</b> <i class="fas fa-certificate text-warning"></i></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_cups_luz" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_cups_luz'></span>
+                    </span>
+                </div>
+                <a href="#historial_cups_luz_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_cups_luz_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_cups_luz" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_cups_luz" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_cups_luz" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='cups_luz' data-toggle="tooltip" title="Genera otro">
+                CUPS LUZ <i class="fa fa-redo"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera código CUPS GAS</b> <i class="fas fa-certificate text-warning"></i></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_cups_gas" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_cups_gas'></span>
+                    </span>
+                </div>
+                <a href="#historial_cups_gas_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_cups_gas_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_cups_gas" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_cups_gas" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_cups_gas" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='cups_gas' data-toggle="tooltip" title="Genera otro">
+                CUPS GAS <i class="fa fa-redo"></i>
+            </button>
         </div>
     </div>
 </div>
