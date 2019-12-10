@@ -166,6 +166,40 @@
             <p id="valida_lei_res" class="text-info text-center"></p>
         </div>
     </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera IMEI</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-11 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_imei" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_imei'></span>
+                    </span>
+                </div>
+                <a href="#historial_imei_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_imei_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_imei" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_imei" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_imei" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='imei' data-toggle="tooltip" title="Genera otro">
+                IMEI <i class="fa fa-redo"></i>
+            </button>
+        </div>
+    </div>
 </div>
 <br>
 <div class="card-deck">
