@@ -99,30 +99,29 @@
         <div style="position: fixed; top: 90px; right: 30px; z-index: 3000;">
             <div role="alert" aria-live="assertive" aria-atomic="true" class="toast">
                 <div class="toast-header bg-warning">
-                    <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Número IMEI</strong>
-                    <small class="text-muted">Justo ahora</small>
+                    <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Descarga JSON, XML, CSV</strong>
+                    <small class="text-muted">Recordatorio</small>
                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="toast-body">
-                    <b>YA</b> existe la generación de <b>IMEIs</b>!
-                    <a href="#otrosdc" data-role="menu" data-menu-id="otrosdc"><b>Ir a otros Dígitos de Control</b></a>
+                    Apartado <a href="#masivo" data-role="menu" data-menu-id="masivo"><b>Generador masivo</b></a> o en <a href="#profiles" data-role="menu" data-menu-id="profiles"><b>Generador de perfiles</b></a> perfiles en la pestaña 'Exportar'
                 </div>
             </div>
-            <!--<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">-->
-                <!--<div class="toast-header bg-warning">-->
-                    <!--<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Exportación JSON y XML de perfiles de usuario y empresa</strong>-->
-                    <!--<small class="text-muted">Recientemente...</small>-->
-                    <!--<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">-->
-                        <!--<span aria-hidden="true">&times;</span>-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="toast-body">-->
-                    <!--En el apartado de perfiles, hay una nueva opción para importar los perfiles en formato JSON y XML.-->
-                    <!--<a href="#profiles" data-role="menu" data-menu-id="profiles"><b>Ver perfiles</b></a>-->
-                <!--</div>-->
-            <!--</div>-->
+            <div role="alert" aria-live="assertive" aria-atomic="true" class="toast">
+                <div class="toast-header bg-warning">
+                    <strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Referencia de CATASTRO</strong>
+                    <small class="text-muted">Recordatorio</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    Generación de Pasaporte, Seguridad social, Código LEI, Número CUPS, Referencias catastrales
+                    <a href="#otrosdc" data-role="menu" data-menu-id="otrosdc"><b>Ir a la generación</b></a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- END TOAST -->
@@ -143,12 +142,12 @@
             <li><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="tooltip" title="Generador de textos aleatorios. Control por caracteres, palabras o frases"><i class="fas fa-quote-right"></i> <span>Lorem Ipsum</span></a></li>
             <li><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="tooltip" title="Generador de perfiles para formularios. Personas y empresas"><i class="fas fa-user-circle"></i> <span>Perfiles</span></a></li>
             <li><a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="tooltip" title="Generador de contraseñas. Validador de seguridad de contraseña"><i class="fas fa-key"></i> <span>Contraseñas</span></a></li>
-            <li><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="tooltip" title="Generador Pasaporte, Seguridad social, Código LEI, Número CUPS, Referencias catastrales"> <i class="fas fa-passport"></i> <span>Pasaporte, LEI, IMEI <i class="fas fa-certificate text-warning"></i>, SS, CUPS y Catastro</span></a></li>
-            <li><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="tooltip" title="Generador DNI Europeos"><i class="fas fa-globe-europe"></i> <span>NIFs europeos <i class="fas fa-certificate text-warning"></i></span> </a></li>
+            <li><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="tooltip" title="Generador Pasaporte, Seguridad social, Código LEI, Número CUPS, Referencias catastrales"> <i class="fas fa-passport"></i> <span>Pasaporte, LEI, IMEI, SS, CUPS y <i class="fas fa-certificate text-warning"></i> Catastro</span></a></li>
+            <li><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="tooltip" title="Generador DNI Europeos"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span> </a></li>
             <li><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="tooltip" title="Generador Vehículos"><i class="fas fa-car-side"></i> <span>Vehículos</span></a></li>
             <li><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="tooltip" title="Cronómetro online"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a></li>
             <li><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="tooltip" title="Generador Todo en 1"><i class="fas fa-blender"></i> <span>Todo en 1</span></a></li>
-            <li><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="tooltip" title="Generador masivo"><i class="fas fa-file-csv"></i> <span>Masivo</span></a></li>
+            <li><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="tooltip" title="Generador masivo"><i class="fas fa-file-csv"></i> <span>Masivo <i class="fas fa-certificate text-warning"></i></span></a></li>
             <li><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="tooltip" title="Contar caracteres"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a></li>
         </ul>
         <hr>

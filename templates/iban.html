@@ -70,6 +70,7 @@
             </div>
             <div class="input-group">
                 <input type="text" class="form-control" id='result_tarjeta' title="Genera tarjeta">
+                <input type="text" class="form-control" hidden id='result_tarjeta_2'>
             </div>
 
             <a href="#historial_tarjeta_collapsible" data-toggle="collapse" class="historial hand"><i class="fas fa-history" data-toggle="tooltip" title="Mostrar/Esconder historial"></i> </a>
@@ -86,6 +87,7 @@
             <hr>
             <div class="btn-group expand_all" role="group">
                 <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#result_tarjeta" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar sin separadores" data-clipboard-target="#result_tarjeta_2" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
                 <button class="btn btn-outline-info" id='tarjeta' data-toggle="tooltip" title="Genera otro"><i class="fa fa-redo"></i></button>
             </div>
         </div>
