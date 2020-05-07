@@ -271,6 +271,22 @@
             </button>
         </div>
     </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Valida código CUPS</b></span>
+        </div>
+        <div class="card-body">
+            <input type="text" class="form-control" id='valida_cups' maxlength='22' title="Valida Código CUPS" placeholder="Ej. ES0288549226906644WX">
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-outline-info" id='valida_cups_btn' title="Valida CUPS" data-toggle="tooltip">Valida <i class="fa fa-check"></i></button>
+                <button class="btn btn-outline-info copy" title="Copiar" data-clipboard-target="#valida_cups" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+            </div>
+
+            <p id="valida_cups_error" class="text-danger"></p>
+            <p id="valida_cups_res" class="text-info text-center"></p>
+        </div>
+    </div>
 </div>
 <br>
 <div class="card-deck">
