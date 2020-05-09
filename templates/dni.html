@@ -131,13 +131,15 @@
                     <option value='W'>W: Establecimientos permanentes de entidades no residentes en España</option>
                 </select>
             </div>
-            <div class="input-group">
-                <input type="text" class="form-control" id='result_custom_cif'>
+            <br>
+            <div class="col-md-12 col-sm-12">
+                <span class="albert copy_html hand" data-clipboard-target="#result_custom_cif" data-toggle="tooltip" title="Click para copiar">
+                    <span id='result_custom_cif'></span>
+                </span>
             </div>
             <hr>
             <div class="btn-group expand_all" role="group">
                 <button class="btn btn-outline-info" id='custom_cif'>CIF <i class="fa fa-redo"></i></button>
-                <button class="btn btn-outline-info copy" data-clipboard-target="#result_custom_cif"><i class="fa fa-copy"></i></button>
             </div>
 
             <p id="custom_cif_error" class="text-danger"></p>
