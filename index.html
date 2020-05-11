@@ -70,86 +70,80 @@
 <body>
 <div class="wrapper">
     <!-- TOAST -->
-    <div class="d-none d-md-block">
-        <!-- Position it -->
-        <div style="position: fixed; top: 90px; right: 30px; z-index: 3000;">
-            <!--<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">-->
-                <!--<div class="toast-header bg-warning">-->
-                    <!--<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Descarga JSON, XML, CSV</strong>-->
-                    <!--<small class="text-muted">Recordatorio</small>-->
-                    <!--<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">-->
-                        <!--<span aria-hidden="true">&times;</span>-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="toast-body">-->
-                    <!--Apartado <a href="#masivo" data-role="menu" data-menu-id="masivo"><b>Generador masivo</b></a> o en <a href="#profiles" data-role="menu" data-menu-id="profiles"><b>Generador de perfiles</b></a> perfiles en la pestaña 'Exportar'-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">-->
-                <!--<div class="toast-header bg-warning">-->
-                    <!--<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Referencia de CATASTRO</strong>-->
-                    <!--<small class="text-muted">Recordatorio</small>-->
-                    <!--<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">-->
-                        <!--<span aria-hidden="true">&times;</span>-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="toast-body">-->
-                    <!--Generación de Pasaporte, Seguridad social, Código LEI, Número CUPS, Referencias catastrales-->
-                    <!--<a href="#otrosdc" data-role="menu" data-menu-id="otrosdc"><b>Ir a la generación</b></a>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-    </div>
+    <!--<div class="d-none d-md-block">-->
+        <!--&lt;!&ndash; Position it &ndash;&gt;-->
+        <!--<div style="position: fixed; top: 90px; right: 30px; z-index: 3000;">-->
+            <!--&lt;!&ndash;<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="toast-header bg-warning">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Descarga JSON, XML, CSV</strong>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<small class="text-muted">Recordatorio</small>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span aria-hidden="true">&times;</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="toast-body">&ndash;&gt;-->
+                    <!--&lt;!&ndash;Apartado <a href="#masivo" data-role="menu" data-menu-id="masivo"><b>Generador masivo</b></a> o en <a href="#profiles" data-role="menu" data-menu-id="profiles"><b>Generador de perfiles</b></a> perfiles en la pestaña 'Exportar'&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="toast-header bg-warning">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Referencia de CATASTRO</strong>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<small class="text-muted">Recordatorio</small>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span aria-hidden="true">&times;</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="toast-body">&ndash;&gt;-->
+                    <!--&lt;!&ndash;Generación de Pasaporte, Seguridad social, Código LEI, Número CUPS, Referencias catastrales&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="#otrosdc" data-role="menu" data-menu-id="otrosdc"><b>Ir a la generación</b></a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+    <!--</div>-->
     <!-- END TOAST -->
 
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3 class="m-0">Generador DNI</h3>
-            <a class="navbar-brand hand" id="menu-home" data-role="menu" data-menu-id="home" data-toggle="tooltip" title="Inicio">
-                <img src="favicon/favicon-32x32.png" class="mr-3 rounded-circle img-thumbnail shadow-sm">
-            </a>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #74b9ff">
+
+        <a class="navbar-brand hand" id="menu-home" data-role="menu" data-menu-id="home" data-toggle="tooltip" title="Inicio">
+            <img src="favicon/favicon-32x32.png" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-id-card"></i> <span>NIF, NIE, CIF</span> <span class="badge badge-warning" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-wallet"></i> <span>IBAN, CCC, Tarjetas</span> <span class="badge badge-warning" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-qrcode"></i> <span>QR y barras</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-quote-right"></i> <span>Textos</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-user-circle"></i> <span>Perfiles</span> <span class="badge badge-warning" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-key"></i> <span>Contraseñas</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fas fa-passport"></i> <span>Pasaporte, LEI, IMEI, SS, CUPS y Catastro</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span> </a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-car-side"></i> <span>Vehículos</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="collapse" data-target=".navbar-collapse"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-blender"></i> <span>Todo en 1</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-file-csv"></i> <span>Masivo</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a></li>
+            </ul>
         </div>
-        <ul class="list-unstyled components">
-            <li><a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="tooltip" title="Generador de DNI (NIF, NIE, CIF) y Calculador de la cifra de control"><i class="fas fa-id-card"></i> <span>NIF, NIE, CIF</span> <span class="badge badge-warning" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-            <li><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="tooltip" title="Generador de IBAN, Cuenta corriente y Tarjeta de crédito"><i class="fas fa-wallet"></i> <span>IBAN, CCC, Tarjetas</span> <span class="badge badge-warning" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-            <li><a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="tooltip" title="Generador de códigos QR y códigos de barras y descárgalos como imagen"><i class="fas fa-qrcode"></i> <span>QR y barras</span></a></li>
-            <li><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="tooltip" title="Generador de textos aleatorios. Control por caracteres, palabras o frases"><i class="fas fa-quote-right"></i> <span>Textos</span></a></li>
-            <li><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="tooltip" title="Generador de perfiles para formularios. Personas y empresas"><i class="fas fa-user-circle"></i> <span>Perfiles</span> <span class="badge badge-warning" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-            <li><a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="tooltip" title="Generador de contraseñas. Validador de seguridad de contraseña"><i class="fas fa-key"></i> <span>Contraseñas</span></a></li>
-            <li><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="tooltip" title="Generador Pasaporte, Seguridad social, Código LEI, Número CUPS, Referencias catastrales"> <i class="fas fa-passport"></i> <span>Pasaporte, LEI, IMEI, SS, CUPS y Catastro</span></a></li>
-            <li><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="tooltip" title="Generador DNI Europeos"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span> </a></li>
-            <li><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="tooltip" title="Generador Vehículos"><i class="fas fa-car-side"></i> <span>Vehículos</span></a></li>
-            <li><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="tooltip" title="Cronómetro online"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a></li>
-            <li><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="tooltip" title="Generador Todo en 1"><i class="fas fa-blender"></i> <span>Todo en 1</span></a></li>
-            <li><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="tooltip" title="Generador masivo"><i class="fas fa-file-csv"></i> <span>Masivo</span></a></li>
-            <li><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="tooltip" title="Contar caracteres"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a></li>
-        </ul>
-        <hr>
-        <ul class="list-unstyled CTAs">
-            <li><div class="sharethis-inline-reaction-buttons"></div></li>
-            <li><div class="sharethis-inline-share-buttons"></div><br></li>
-        </ul>
     </nav>
 
-
 <!-- Page Content  -->
-    <div id="content">
+    <div class="container-fluid">
+
         <div class="row">
-            <div class="col-4">
-                <button type="button" id="sidebarCollapse" class="btn btn-info btn-lg">
-                    <i class="fas fa-bars text-white"></i>
-                </button>
-                <a class="btn btn-warning btn-lg" href="http://api.generadordni.es">API disponible!</a>
-                <a class="btn btn-primary btn-lg" target="_blank" href="https://www.buymeacoffee.com/aasensiog"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" height="25px">Buy me a coffee</span></a>
-            </div>
-            <div class="col-8">
-                <h2 class="float-right text-info">
+            <div class="col">
+                <h1 class="text-info">
                     <!-- halloween -->
                     <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="I'm gonna scare you!" name="halloween"></i>-->
                     <!--<i class="fas fa-spider fa-spin" style="color:black;" data-toggle="tooltip" title="Look behind..." name="halloween"></i>-->
                     <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="Me to..." name="halloween"></i>-->
-                    <span id="title"></span></h2>
+                    <b id="title"></b></h1>
+            </div>
+            <div class="col-md-auto">
+                <a class="btn btn-warning btn-lg float-right" href="http://api.generadordni.es">API disponible!</a>
+                <a class="btn btn-primary btn-lg float-right" target="_blank" href="https://www.buymeacoffee.com/aasensiog"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" height="25px">Buy me a coffee</span></a>
             </div>
         </div>
         <div class="row advertisement">
@@ -281,15 +275,13 @@
         <!--</div>-->
         <div class="collapse show" id="rating">
             <div class="row secondary">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-12">
                     <h3 class="text-theme">Encuesta</h3>
                     <script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=true,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdwJrdrZF9SHUt11KjI_2BnU1wn2C_2FwduROQWHUg2o0Uc6d.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
                 </div>
             </div>
         </div>
-
     </div>
-
 
 </div>
 <footer class="footer">
