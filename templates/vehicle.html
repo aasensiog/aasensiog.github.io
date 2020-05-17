@@ -2,11 +2,11 @@
 <div class="card-deck">
     <div class="card border-info">
         <div class="card-header">
-            <i class="fa fa-car text-white"></i> <span class="text-info"><b>Matrícula</b></span>
+            <span class="text-info"><i class="fa fa-car"></i> <b>Matrícula</b></span>
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-md-11 col-sm-12">
+                <div class="col-md-12 col-sm-12">
                     <span class="albert copy_html hand" data-clipboard-target="#result_matricula" data-toggle="tooltip" title="Click para copiar">
                         <span id='result_matricula'></span>
                     </span>
@@ -36,11 +36,11 @@
     </div>
     <div class="card border-info">
         <div class="card-header">
-            <i class="fa fa-motorcycle text-white"></i> <span class="text-info"><b>Matrícula Ciclomotor</b></span>
+            <span class="text-info"><i class="fa fa-motorcycle"></i> <b>Matrícula Ciclomotor</b></span>
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-md-11 col-sm-12">
+                <div class="col-md-12 col-sm-12">
                     <span class="albert copy_html hand" data-clipboard-target="#result_matricula_ciclo" data-toggle="tooltip" title="Click para copiar">
                         <span id='result_matricula_ciclo'></span>
                     </span>
@@ -70,11 +70,153 @@
     </div>
     <div class="card border-info">
         <div class="card-header">
-            <i class="fa fa-car text-white"></i> <span class="text-info"><b>Bastidor</b></span>
+            <span class="text-info"><i class="fa fa-truck-loading"></i> <b>Matrícula Remolque</b></span>
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-md-11 col-sm-12">
+                <div class="col-md-12 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_matricula_remo" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_matricula_remo'></span>
+                    </span>
+                </div>
+                <a href="#historial_matricula_remo_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_matricula_remo_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_matricula_remo" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_matricula_remo" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_matricula_remo" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='matricula_remo' data-toggle="tooltip" title="Genera otro">
+                Matrícula remolque <i class="fa fa-redo"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><i class="fa fa-snowplow"></i> <b>Matrícula vehículo especial</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_matricula_espe" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_matricula_espe'></span>
+                    </span>
+                </div>
+                <a href="#historial_matricula_espe_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_matricula_espe_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_matricula_espe" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_matricula_espe" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_matricula_espe" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='matricula_espe' data-toggle="tooltip" title="Genera otro">
+                Matrícula vehículo especial <i class="fa fa-redo"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><i class="fa fa-plane"></i> <b>Matrícula vehículo turístico</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_matricula_turi" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_matricula_turi'></span>
+                    </span>
+                </div>
+                <a href="#historial_matricula_turi_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_matricula_turi_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_matricula_turi" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_matricula_turi" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_matricula_turi" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='matricula_turi' data-toggle="tooltip" title="Genera otro">
+                Matrícula vehículo turístico <i class="fa fa-redo"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><i class="fa fa-car-alt"></i> <b>Matrícula vehículo histórico</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_matricula_hist" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_matricula_hist'></span>
+                    </span>
+                </div>
+                <a href="#historial_matricula_hist_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_matricula_hist_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_matricula_hist" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_matricula_hist" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_matricula_hist" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='matricula_hist' data-toggle="tooltip" title="Genera otro">
+                Matrícula vehículo histórico <i class="fa fa-redo"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><i class="fa fa-car"></i> <b>Bastidor</b></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
                     <span class="albert copy_html hand" data-clipboard-target="#result_bastidor" data-toggle="tooltip" title="Click para copiar">
                         <span id='result_bastidor'></span>
                     </span>
