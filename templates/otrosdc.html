@@ -62,6 +62,7 @@
             </div>
         </div>
     </div>
+
     <div class="card border-info">
         <div class="card-header">
             <span class="text-info"><b>Genera Pasaporte</b></span>
@@ -205,7 +206,7 @@
 <div class="card-deck">
     <div class="card border-info">
         <div class="card-header">
-            <span class="text-info"><b>Genera código CUPS Luz</b> <i class="fas fa-certificate text-warning"></i></span>
+            <span class="text-info"><b>Genera código CUPS Luz</b></span>
         </div>
         <div class="card-body">
             <div class="row">
@@ -239,7 +240,7 @@
     </div>
     <div class="card border-info">
         <div class="card-header">
-            <span class="text-info"><b>Genera código CUPS Gas</b> <i class="fas fa-certificate text-warning"></i></span>
+            <span class="text-info"><b>Genera código CUPS Gas</b></span>
         </div>
         <div class="card-body">
             <div class="row">
@@ -292,7 +293,7 @@
 <div class="card-deck">
     <div class="card border-info">
         <div class="card-header">
-            <span class="text-info"><b>Genera referencia catastral urbana</b> <i class="fas fa-certificate text-warning"></i></span>
+            <span class="text-info"><b>Genera referencia catastral urbana</b></span>
         </div>
         <div class="card-body">
             <div class="row">
@@ -326,7 +327,7 @@
     </div>
     <div class="card border-info">
         <div class="card-header">
-            <span class="text-info"><b>Genera referencia catastral rústica</b> <i class="fas fa-certificate text-warning"></i></span>
+            <span class="text-info"><b>Genera referencia catastral rústica</b></span>
         </div>
         <div class="card-body">
             <div class="row">
@@ -360,7 +361,7 @@
     </div>
     <div class="card border-info">
         <div class="card-header">
-            <span class="text-info"><b>Valida referencia catastral</b> <i class="fas fa-certificate text-warning"></i></span>
+            <span class="text-info"><b>Valida referencia catastral</b></span>
         </div>
         <div class="card-body">
             <input type="text" class="form-control" id='valida_catastro' maxlength='20' title="Valida referencia catastro" placeholder="Ej. 6489501DF3868G0047ZH">
@@ -372,6 +373,68 @@
 
             <p id="valida_catastro_error" class="text-danger"></p>
             <p id="valida_catastro_res" class="text-info text-center"></p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card-deck">
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Genera ISIN</b> <i class="fas fa-certificate text-warning"></i></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <span class="albert copy_html hand" data-clipboard-target="#result_isin" data-toggle="tooltip" title="Click para copiar">
+                        <span id='result_isin'></span>
+                    </span>
+                </div>
+                <a href="#historial_isin_collapsible" data-toggle="collapse" class="historial hand">
+                    <span data-toggle="tooltip" title="Mostrar/Esconder historial">
+                        <i class="fas fa-history"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="collapse" id="historial_isin_collapsible">
+                <br>
+                <p>Historial:</p>
+                <ul id="historial_isin" class="col_historic">
+                </ul>
+                <div class="row justify-content-md-center">
+                    <button id="clean_historic_isin" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Limpiar</button>
+                    <button id="download_isin" class="btn btn-outline-info"><i class="fa fa-download"></i> Descargar</button>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-lg btn-outline-info btn-block pull-right" id='isin' data-toggle="tooltip" title="Genera otro">
+                ISIN <i class="fa fa-redo"></i>
+            </button>
+        </div>
+        <!--<div class="card-footer">-->
+            <!--<i class="fa fa-info"></i> Formato: <b>PP NNNNNNNN DC</b>-->
+            <!--<ul class="list-group">-->
+                <!--<li class="list-group-item"><b>PP</b>: 2 dígitos de la provincia</li>-->
+                <!--<li class="list-group-item"><b>NNNNNNNN</b>: 8 dígitos, número secuencial</li>-->
+                <!--<li class="list-group-item"><b>DC</b>: 2 dígitos de control</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+
+    <div class="card border-info">
+        <div class="card-header">
+            <span class="text-info"><b>Valida código ISIN</b> <i class="fas fa-certificate text-warning"></i></span>
+        </div>
+        <div class="card-body">
+            <input type="text" class="form-control" id='valida_isin' maxlength='12' title="Valida Código LEI" placeholder="Ej. US0378331005">
+            <hr>
+            <div class="btn-group expand_all" role="group">
+                <button class="btn btn-lg btn-outline-info" id='valida_isin_btn' title="Valida ISIN" data-toggle="tooltip">Valida <i class="fa fa-check"></i></button>
+                <button class="btn btn-lg btn-outline-info copy" title="Copiar" data-clipboard-target="#valida_isin" data-toggle="tooltip"><i class="fa fa-copy"></i></button>
+            </div>
+
+            <p id="valida_isin_error" class="text-danger"></p>
+            <p id="valida_isin_res" class="text-info text-center"></p>
         </div>
     </div>
 </div>
