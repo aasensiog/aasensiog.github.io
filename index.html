@@ -9,8 +9,10 @@
     <meta http-equiv="Pragma" content="no-cache">
 
     <title data-role="titulo">Generador de datos para pruebas</title>
-    <meta name="description" content="Generador de DNI aleatorio, Calcula letra DNI, Calcula letra NIF, NIE, CIF, Validar DNI, Validar NIF, Validar CIF, Genera perfiles de usuario y empresas para formularios, Números de cuentas corrientes, IBAN y tarjetas de crédito para pruebas. Genera códigos de barras y QR. Genera y valida código LEI, Generador códigos LEI, Valida código LEI. Genera y valida código ISIN, Generador códigos ISIN, Valida código ISIN">
-    <meta name="keywords" content="Generador de DNI, Generador de CIF, Generador de NIE, Calcula letra DNI, Validar DNI, Validar NIF, Validar CIF, calcular iban, Numero de tarjeta de credito, Generador de codigos QR, Generador QR, Crear QR, Generador codigo de barras, Genera codigo de barras, Generador de texto, Generador de texto aleatorio, Generador de perfiles de usuario, Generador de empresas, Generador de datos de usuarios">
+    <meta name="description"
+          content="Generador de DNI aleatorio, Calcula letra DNI, Calcula letra NIF, NIE, CIF, Validar DNI, Validar NIF, Validar CIF, Genera perfiles de usuario y empresas para formularios, Números de cuentas corrientes, IBAN y tarjetas de crédito para pruebas. Genera códigos de barras y QR. Genera y valida código LEI, Generador códigos LEI, Valida código LEI. Genera y valida código ISIN, Generador códigos ISIN, Valida código ISIN">
+    <meta name="keywords"
+          content="Generador de DNI, Generador de CIF, Generador de NIE, Calcula letra DNI, Validar DNI, Validar NIF, Validar CIF, calcular iban, Numero de tarjeta de credito, Generador de codigos QR, Generador QR, Crear QR, Generador codigo de barras, Genera codigo de barras, Generador de texto, Generador de texto aleatorio, Generador de perfiles de usuario, Generador de empresas, Generador de datos de usuarios">
 
     <link rel="canonical" href="https://generadordni.es">
     <link rel="icon" type="image/svg+xml" href="images/generadordni.svg">
@@ -23,7 +25,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -61,38 +63,6 @@
 </head>
 <body>
 <div class="wrapper">
-    <!-- TOAST -->
-    <!--<div class="d-none d-md-block">-->
-        <!--&lt;!&ndash; Position it &ndash;&gt;-->
-        <!--<div style="position: fixed; top: 90px; right: 30px; z-index: 3000;">-->
-            <!--<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">-->
-                <!--<div class="toast-header bg-warning">-->
-                    <!--<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> Pasaporte y Seguridad Social, LEI y Referencias Catastrales</strong>-->
-                    <!--<small class="text-muted">Recordatorio</small>-->
-                    <!--<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">-->
-                        <!--<span aria-hidden="true">&times;</span>-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="toast-body">-->
-                    <!--Apartado <a href="#otrosdc" data-role="menu" data-menu-id="otrosdc"><b> Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI y ISIN</b></a>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div role="alert" aria-live="assertive" aria-atomic="true" class="toast">-->
-                <!--<div class="toast-header bg-warning">-->
-                    <!--<strong class="mr-auto"><i class="fas fa-certificate text-black"></i> ISIN</strong>-->
-                    <!--<small class="text-muted">Justo ahora</small>-->
-                    <!--<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">-->
-                        <!--<span aria-hidden="true">&times;</span>-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="toast-body">-->
-                    <!--Añadida la generación y validación de códigos ISIN-->
-                    <!--<a href="#otrosdc" data-role="menu" data-menu-id="otrosdc" class="btn btn-warning"><b>Ir</b></a>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!-- END TOAST -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -104,125 +74,141 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-id-card"></i> <span>NIF, NIE, CIF</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-wallet"></i> <span>IBAN, CCC, Tarjetas</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-user-circle"></i> <span>Perfiles</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-qrcode"></i> <span>QR y barras</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-quote-right"></i> <span>Textos</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-key"></i> <span>Contraseñas</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fas fa-passport"></i> <span>Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI, ISIN</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-car-side"></i> <span>Vehículos</span> <span class="badge badge-danger" data-toggle="tooltip" title="Disponible en API">API</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="collapse" data-target=".navbar-collapse"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-blender"></i> <span>Todo en 1</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-file-csv"></i> <span>Masivo</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-id-card"></i> <span>NIF, NIE, CIF</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-wallet"></i> <span>IBAN, CCC, Tarjetas</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-user-circle"></i> <span>Perfiles</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-qrcode"></i> <span>QR y barras</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-quote-right"></i> <span>Textos</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-key"></i> <span>Contraseñas</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="collapse" data-target=".navbar-collapse"> <i
+                        class="fas fa-passport"></i> <span>Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI, ISIN</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-globe-europe"></i> <span>NIFs europeos</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-car-side"></i> <span>Vehículos</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-blender"></i> <span>Todo en 1</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-file-csv"></i> <span>Masivo</span></a></li>
+                <li class="nav-item"><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="collapse" data-target=".navbar-collapse"><i
+                        class="fas fa-calculator"></i> <span>Contador caracteres</span></a></li>
             </ul>
         </div>
     </nav>
 
-<!-- Page Content  -->
+    <!-- Page Content  -->
     <div class="container-fluid">
-
-
         <div class="row">
-            <div class="col">
+            <div class="col-1">
                 <!-- Begin BidVertiser code -->
-                <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=1870097" TYPE="text/javascript"></SCRIPT>
+                <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=2043545" TYPE="text/javascript"></SCRIPT>
                 <!-- End BidVertiser code -->
             </div>
-            <div class="col">
+            <div class="col-10">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-info">
+                            <!-- halloween -->
+                            <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="I'm gonna scare you!" name="halloween"></i>-->
+                            <!--<i class="fas fa-spider fa-spin" style="color:black;" data-toggle="tooltip" title="Look behind..." name="halloween"></i>-->
+                            <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="Me to..." name="halloween"></i>-->
+                            <b id="title"></b></h3>
+                    </div>
+                    <div class="col-md-auto">
+                        <a class="btn btn-info" target="_blank" href="https://extensions.generadordni.es/" title="https://extensions.generadordni.es"
+                           data-toggle="tooltip"><img src="img/extensions.generadordni.svg" height="20px"/>Chrome Extension</a>
+
+                        <a class="btn btn-primary float-right" target="_blank" href="https://www.buymeacoffee.com/aasensiog"><img
+                                src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" height="20px">Buy me a coffee</span></a>
+                        <a class="btn btn-danger float-right" target="_blank" href="https://api.generadordni.es">API v2 disponible!</a>
+
+                    </div>
+                </div>
+                <br>
+                <div id="container-alert"></div>
+
+                <div class="snackbar text-center">
+                    <div><i class="fa fa-clipboard-check"></i> COPIADO!</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div id="spinner" class="text-center">
+                            <span class="text-info">
+                                <i class="fas fa-spinner fa-10x fa-spin"></i>
+                            </span>
+                        </div>
+                        <div id="containers"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
                 <!-- Begin BidVertiser code -->
-                <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=1981463" TYPE="text/javascript"></SCRIPT>
+                <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=2043546" TYPE="text/javascript"></SCRIPT>
                 <!-- End BidVertiser code -->
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <h3 class="text-info">
-                    <!-- halloween -->
-                    <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="I'm gonna scare you!" name="halloween"></i>-->
-                    <!--<i class="fas fa-spider fa-spin" style="color:black;" data-toggle="tooltip" title="Look behind..." name="halloween"></i>-->
-                    <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="Me to..." name="halloween"></i>-->
-                    <b id="title"></b></h3>
-                <p class="lead">Genera datos aleatorios para tus pruebas!</p>
-            </div>
-            <div class="col-md-auto">
-                <a class="btn btn-info btn-lg" target="_blank" href="https://extensions.generadordni.es/"  title="https://extensions.generadordni.es" data-toggle="tooltip"><img src="img/extensions.generadordni.svg" height="25px"/>Chrome Extension</a>
-
-                <a class="btn btn-primary btn-lg float-right" target="_blank" href="https://www.buymeacoffee.com/aasensiog"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" height="25px">Buy me a coffee</span></a>
-                <a class="btn btn-danger btn-lg float-right" target="_blank" href="https://api.generadordni.es">API v2 disponible!</a>
-
-            </div>
-        </div>
-        <br>
-        <div id="container-alert"></div>
-
-        <div class="snackbar text-center">
-            <div><i class="fa fa-clipboard-check"></i> COPIADO!</div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div id="spinner" class="text-center">
-                    <span class="text-info">
-                        <i class="fas fa-spinner fa-10x fa-spin"></i>
-                    </span>
-                </div>
-
-                <div id="containers"></div>
-
-            </div>
-        </div>
-
-        <br>
-        <hr>
-        <!--<button href="#faq" data-toggle="collapse" class="btn btn-light">-->
-            <!--<span>Mostrar/Esconder FAQ y peticiones <i class="fa fa-arrows-alt-v"></i></span>-->
-        <!--</button>-->
-        <div class="row">
-            <div class="col">
-                <script async="async" data-cfasync="false" src="//pl15881129.topprofitablegate.com/ecb362c028a0657815f2e75766ad0816/invoke.js"></script>
-                <div id="container-ecb362c028a0657815f2e75766ad0816"></div>
-            </div>
-        </div>
-        <!-- BIDVERTISER
-        <div class="row">
-            <div class="col">
-                <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=2043506" TYPE="text/javascript"></SCRIPT>
-            </div>
-            <div class="col">
-                <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=2043507" TYPE="text/javascript"></SCRIPT>
-            </div>
-        </div>
-        -->
-        <div class="row">
-            <div class="col text-center">
-                <button href="#rating" data-toggle="collapse" class="btn btn-light text-center">
-                    <span>Mostrar/Esconder Valoraciones y encuesta <i class="fa fa-arrows-alt-v"></i></span>
-                </button>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_donations" />
-                    <input type="hidden" name="business" value="HEK5NLG3UDNV6" />
-                    <input type="hidden" name="currency_code" value="EUR" />
-                    <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                    <img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1" />
-                </form>
-            </div>
-        </div>
-
-        <br>
-        <br>
-        <div class="collapse show" id="rating">
-            <div class="row secondary">
-                <div class="col-md-12">
-                    <h3 class="text-theme">Encuesta</h3>
-                    <script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdzkhGeC9cPbtQwpqeZmZScLU8fZHPQO38uNLAVP_2FKs77.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
-                </div>
             </div>
         </div>
     </div>
+    <hr>
+    <!--<button href="#faq" data-toggle="collapse" class="btn btn-light">-->
+    <!--<span>Mostrar/Esconder FAQ y peticiones <i class="fa fa-arrows-alt-v"></i></span>-->
+    <!--</button>-->
+    <div class="row">
+        <div class="col">
+            <script async="async" data-cfasync="false" src="//pl15881129.topprofitablegate.com/ecb362c028a0657815f2e75766ad0816/invoke.js"></script>
+            <div id="container-ecb362c028a0657815f2e75766ad0816"></div>
+        </div>
+    </div>
+    <!-- BIDVERTISER
+    <div class="row">
+        <div class="col">
+            <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=2043506" TYPE="text/javascript"></SCRIPT>
+        </div>
+        <div class="col">
+            <SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=685447&bid=2043507" TYPE="text/javascript"></SCRIPT>
+        </div>
+    </div>
+    -->
+    <div class="row">
+        <div class="col text-center">
+            <button href="#rating" data-toggle="collapse" class="btn btn-light text-center">
+                <span>Mostrar/Esconder Valoraciones y encuesta <i class="fa fa-arrows-alt-v"></i></span>
+            </button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_donations"/>
+                <input type="hidden" name="business" value="HEK5NLG3UDNV6"/>
+                <input type="hidden" name="currency_code" value="EUR"/>
+                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donate_LG.gif" border="0" name="submit"
+                       title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button"/>
+                <img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1"/>
+            </form>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="collapse show" id="rating">
+        <div class="row secondary">
+            <div class="col-md-12">
+                <h3 class="text-theme">Encuesta</h3>
+                <script>(function (t, e, s, n) {
+                    var o, a, c;
+                    t.SMCX = t.SMCX || [], e.getElementById(n) || (o = e.getElementsByTagName(s), a = o[o.length - 1], c = e.createElement(s), c.type = "text/javascript", c.async = !0, c.id = n, c.src = "https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdzkhGeC9cPbtQwpqeZmZScLU8fZHPQO38uNLAVP_2FKs77.js", a.parentNode.insertBefore(c, a))
+                })(window, document, "script", "smcx-sdk");</script>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 <footer class="footer">
     <br>
@@ -234,13 +220,16 @@
                 </legend>
                 <p>
                     <!--<a href="https://twitter.com/aasensiog" target="_blank"><i class="fab fa-twitter fa-2x" alt="Twitter" title="Twitter" data-toggle="tooltip"></i></a>-->
-                    <a href="https://es.linkedin.com/in/albertasensio" target="_blank"><i class="fab fa-linkedin-in fa-2x" alt="LinkedIn" title="LinkedIn" data-toggle="tooltip"></i></a>
+                    <a href="https://es.linkedin.com/in/albertasensio" target="_blank"><i class="fab fa-linkedin-in fa-2x" alt="LinkedIn" title="LinkedIn"
+                                                                                          data-toggle="tooltip"></i></a>
                     <a dir="rtl" href="mailto:generadordni@gmail.com"><i class="fas fa-envelope fa-2x" alt="Email" title="Email" data-toggle="tooltip"></i></a>
                 </p>
                 <p><a href="http://albertasensio.es">albertasensio.es</a></p>
                 <p><a href="cookies.html">Política de cookies</a></p>
                 <p><a href="terms_of_use.html">Condiciones de uso</a></p>
-                <p class="text-muted">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                <p class="text-muted">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved
+                </p>
             </div>
             <div class="col">
                 <form action="https://formspree.io/mknqvlga" id="contact-form" method="post" role="form">
@@ -251,8 +240,10 @@
                         <button type="submit" class="btn btn-primary btn-block">Envía</button>
                     </fieldset>
                 </form>
-                <div class="sharethis-inline-reaction-buttons"></div><br>
-                <div class="sharethis-inline-share-buttons"></div><br>
+                <div class="sharethis-inline-reaction-buttons"></div>
+                <br>
+                <div class="sharethis-inline-share-buttons"></div>
+                <br>
             </div>
         </div>
     </div>
