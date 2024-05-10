@@ -1,289 +1,475 @@
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Last-Modified" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
+  <head>
+    <meta charset="utf-8">
+    <title>Testing data generator</title>
+    <meta name="description" content="Generador de datos para pruebas. Testing data generator. Generate dummy data for your tests">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/2.0.0/css/froala_blocks.min.css">
+  </head>
 
-    <title data-role="titulo">Generador de datos para pruebas</title>
-    <meta name="description"
-          content="Generador de DNI aleatorio, Calcula letra DNI, Calcula letra NIF, NIE, CIF, Validar DNI, Validar NIF, Validar CIF, Genera perfiles de usuario y empresas para formularios, Números de cuentas corrientes, IBAN y tarjetas de crédito para pruebas. Genera códigos de barras y QR. Genera y valida código LEI, Generador códigos LEI, Valida código LEI. Genera y valida código ISIN, Generador códigos ISIN, Valida código ISIN">
-    <meta name="keywords"
-          content="Generador de DNI, Generador de CIF, Generador de NIE, Calcula letra DNI, Validar DNI, Validar NIF, Validar CIF, calcular iban, Numero de tarjeta de credito, Generador de codigos QR, Generador QR, Crear QR, Generador codigo de barras, Genera codigo de barras, Generador de texto, Generador de texto aleatorio, Generador de perfiles de usuario, Generador de empresas, Generador de datos de usuarios">
+  <body>
 
-    <link rel="canonical" href="https://generadordni.es">
-    <link rel="icon" type="image/svg+xml" href="img/generadordni.svg">
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <header class="bg-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-md">
+          <a class="navbar-brand" href="/">
+            <img src="/landing/images/logo.svg" height="30" alt="image">
+          </a>
 
-    <!-- CSS -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav11" aria-controls="navbarNav11" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap/4/bootstrap.customtheme.min.css">
-    <link rel="stylesheet" href="css/build/css.min.css">
-
-    <!-- JS in HEAD -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-59242625-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-    <!--<script data-ad-client="ca-pub-7556109134559449" async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-</head>
-<body>
-<div class="wrapper">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <a class="navbar-brand hand" id="menu-home" data-role="menu" data-menu-id="home" data-toggle="tooltip"
-           title="Inicio">
-            <img src="img/generadordni.svg" width="32" height="32" class="mr-3 shadow-sm">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-id-card"></i> <span>NIF, NIE, CIF</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-wallet"></i> <span>IBAN, CCC, Tarjetas</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-user-circle"></i> <span>Perfiles</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Más
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" id="menu-qr" data-role="menu" data-menu-id="qr" data-in-dropdown="dropdown"><i class="fas fa-qrcode"></i> <span>QR y barras</span></a>
-                      <a class="dropdown-item" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-in-dropdown="dropdown"><i class="fas fa-quote-right"></i> <span>Textos</span></a>
-                      <a class="dropdown-item" id="menu-password" data-role="menu" data-menu-id="password" data-in-dropdown="dropdown"><i class="fas fa-key"></i> <span>Contraseñas</span></a>
-                      <a class="dropdown-item" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-in-dropdown="dropdown"><i class="fas fa-passport"></i> <span>Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI, ISIN</span></a>
-                      <a class="dropdown-item" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-in-dropdown="dropdown"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span></a>
-                      <a class="dropdown-item" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-in-dropdown="dropdown"><i class="fas fa-car-side"></i> <span>Vehículos</span></a>
-                      <a class="dropdown-item" id="menu-crono" data-role="menu" data-menu-id="crono" data-in-dropdown="dropdown"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a>
-                      <a class="dropdown-item" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-in-dropdown="dropdown"><i class="fas fa-blender"></i> <span>Todo en 1</span></a>
-                      <a class="dropdown-item" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-in-dropdown="dropdown"><i class="fas fa-file-csv"></i> <span>Masivo</span></a>
-                      <a class="dropdown-item" id="menu-count" data-role="menu" data-menu-id="count" data-in-dropdown="dropdown"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a>
-                    </div>
-                </li>
-
-                <!--
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-qrcode"></i> <span>QR y barras</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-quote-right"></i> <span>Textos</span></a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-key"></i> <span>Contraseñas</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fas fa-passport"></i><span>Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI, ISIN</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-car-side"></i> <span>Vehículos</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="collapse" data-target=".navbar-collapse"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-blender"></i> <span>Todo en 1</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-file-csv"></i> <span>Masivo</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a>
-                </li>
-                -->
+          <div class="collapse navbar-collapse" id="navbarNav11">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Herramientas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#donate">Dona</a>
+              </li>
             </ul>
+            <a class="btn btn-sm btn-outline-light ml-md-3" title="Generador web" data-toggle="tooltip" href="https://generadordni.es">Web</a>
+            <a class="btn btn-sm btn-outline-light ml-md-3" title="API de generación de datos" data-toggle="tooltip"  href="https://api.generadordni.es">API</a>
+            <a class="btn btn-sm btn-outline-light ml-md-3" title="Generador de ficheros de importación Excel" data-toggle="tooltip"  href="https://generateandexport.testingdatagenerator.com">XLSX</a>
+            <a class="btn btn-sm btn-outline-light ml-md-3" title="Extensión para Google Chrome" data-toggle="tooltip"  href="https://chrome.google.com/webstore/detail/generadordnies-magic-form/ldhgilameoaangheidpgljgoiojondom?hl=es"><i class="fab fa-chrome"></i></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="fdb-block" style="background-image: url(https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//shapes/8.svg)" data-block-type="contents" data-id="1" draggable="true">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 col-lg-5">
+            <img alt="image" class="fdb-icon" src="/landing/images/logo.svg">
+            <h1>Testing data generator</h1>
+            <p class="lead">Tu página web de referencia para generar datos aleatorios para tus pruebas!</p>
+          </div>
+          <div class="col-10 col-sm-6 m-auto col-md-4 pt-4 pt-md-0">
+            <img alt="image" class="img-fluid rounded-0" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//draws/chat.svg">
+          </div>
         </div>
-        <form class="d-flex">
+      </div>
+    </section>
+    <section class="fdb-block">
+      <div class="container">
+        <div class="row text-left align-items-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <h2>Más rápido</h2>
+            <p class="lead">Con estas herramientas de genración con un simple click tendrás datos aleatorios pero con aspecto real para tus pruebas</p>
+          </div>
 
-            <a class="btn btn-danger" target="_blank" href="https://api.generadordni.es" title="¿Cansado de copiar y pegar? Descubre nuestra API y ahorra tiempo" data-toggle="tooltip"><i class="fas fa-robot"></i> API v2 disponible!</a> &nbsp;
-            <a class="btn btn-warning" target="_blank" href="https://generateandexport.testingdatagenerator.com/" title="Configura las columnas y como quieres que se rellenen. Descárgalo e importa!" data-toggle="tooltip"><i class="fas fa-file-excel"></i></a> &nbsp;
-            <a class="btn btn-primary" target="_blank" href="https://www.buymeacoffee.com/aasensiog" title="Dedicamos mucho tiempo y dinero en mejorar y mantener este sitio vivo. Ahora sin publicidad. Colabora para que podamos continuar :)" data-toggle="tooltip"><img
-                                src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"
-                                height="20px"></span></a>
-        </form>
-    </nav>
-    <!-- Page Content  -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
+          <div class="col-12 col-md-6 col-lg-4 pt-4 pt-md-0">
+            <h2>Más productivo</h2>
+            <p class="lead">Invierte tu tiempo en lo que realmente importa, y no en pensar datos de prueba que cumplan las validaciones</p>
+          </div>
 
-                <br>
-                <div class="alert alert-info" role="alert">
-                    <i class="fas fa-robot text-warning"></i> <b>Saca el máximo partido a la generación de datos con nuestra API!</b> Ejemplo: <a href="https://api.generadordni.es/v2/profiles/person?results=5&gender=female" target="_blank">Genera 5 perfiles de mujer</a> <a class='btn btn-primary btn-sm float-right' href="https://api.generadordni.es" target="_blank">Pruébala gratis</a>
-                </div>
+          <div class="col-12 col-md-8 m-auto m-lg-0 col-lg-4 pt-5 pt-lg-0">
+            <img alt="image" class="img-fluid" src="./imgs/draws/tabs.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fdb-block" data-block-type="features" data-id="2" draggable="true" id="features">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h1>Herramientas</h1>
+          </div>
+        </div>
+        <div class="row text-center justify-content-center mt-5">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <img alt="image" class="fdb-icon" src="/landing/images/logo.svg">
+            <h3><strong>Generador de datos web</strong></h3>
+            <p>Genera datos en la página, copia el dato y llevátelo donde quieras</p>
+            <a href="#detail_web">Leer más</a> | <a class="btn btn-outline-primary" href="https://generadordni.es" target="_blank">Pruébalo</a>
+          </div>
 
+          <div class="col-12 col-sm-6 col-lg-3 pt-4 pt-sm-0">
+            <img alt="image" class="fdb-icon" src="/landing/images/xlsx.svg">
+            <h3><strong>Generador de ficheros XLSX de importación</strong></h3>
+            <p>Configura o importa tu plantilla de importación. Decide como quieres que el sistema rellene cada columna y genera tu fichero lleno de datos listo para importar!</p>
+            <a href="#detail_excel">Leer más</a> | <a class="btn btn-outline-primary" href="https://generateandexport.testingdatagenerator.com" target="_blank">Pruébalo</a>
+          </div>
 
-                <div class="row">
-                    <div class="col">
-                        <h3 class="text-info">
-                            <!-- halloween -->
-                            <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="I'm gonna scare you!" name="halloween"></i>-->
-                            <!--<i class="fas fa-spider fa-spin" style="color:black;" data-toggle="tooltip" title="Look behind..." name="halloween"></i>-->
-                            <!--<i class="fas fa-ghost heartbeat" style="color:orange;" data-toggle="tooltip" title="Me to..." name="halloween"></i>-->
-                            <b id="title"></b></h3>
-                    </div>
-                    <div class="col-md-auto">
+          <div class="col-12 col-sm-6 col-lg-3 pt-4 pt-lg-0">
+            <img alt="image" class="fdb-icon" src="/landing/images/api.svg">
+            <h3><strong>API de generación de datos</strong></h3>
+            <p>Genera datos consumiendo nuestra API</p>
+            <a href="#detail_api">Leer más</a> | <a class="btn btn-outline-primary" href="https://api.generadordni.es" target="_blank">Pruébalo</a>
+          </div>
 
-                        <!--<a class="btn btn-info" target="_blank" href="https://extensions.generadordni.es/"
-                           title="https://extensions.generadordni.es"
-                           data-toggle="tooltip"><img src="img/extensions.generadordni.svg" height="20px"/>Chrome
-                            Extension</a>-->
-
-                        <span id="left_generations"></span>
-                    </div>
-                </div>
-                <br>
-                <div id="container-alert"></div>
-
-                <div class="snackbar text-center">
-                    <div><i class="fa fa-clipboard-check"></i> COPIADO!</div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div id="spinner" class="text-center">
-                            <span class="text-info">
-                                <i class="fas fa-spinner fa-10x fa-spin"></i>
-                            </span>
-                        </div>
-                        <div id="containers"></div>
-                    </div>
-                </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-4 pt-lg-0">
+            <img alt="image" class="fdb-icon" src="/landing/images/chrome.svg">
+            <h3><strong>Extensión para Google Chrome</strong></h3>
+            <p>Rellena automáticamente tus formularios con solo pulsar un botón! El sistema inferirá que tipo de valor debe rellenar en cada campo!</p>
+            <a href="#detail_chrome">Leer más</a> | <a class="btn btn-outline-primary" href="https://chrome.google.com/webstore/detail/generadordnies-magic-form/ldhgilameoaangheidpgljgoiojondom?hl=es" target="_blank">Pruébalo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fdb-block" data-block-type="features" data-id="4" draggable="true" id="detail_web">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h1>Generador de datos web</h1>
+          </div>
+        </div>
+        <div class="row text-left mt-5">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/doi.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>NIF, NIE, CIF</strong></h3>
+                <p>Genera NIF, NIE, CIF</p>
+              </div>
             </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-sm-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/bank.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>Datos de pago</strong></h3>
+                <p>Genera cuentas bancarias y tarjetas de crédito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/profile.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>Perfiles de usuario y empresa</strong></h3>
+                <p>Genera perfiles de persona y empresa</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/qr.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>Códigos de barras y QR</strong></h3>
+                <p>Genera códigos de barras de todo tipo y códigos QR</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <hr>
-    <!--<button href="#faq" data-toggle="collapse" class="btn btn-light">-->
-    <!--<span>Mostrar/Esconder FAQ y peticiones <i class="fa fa-arrows-alt-v"></i></span>-->
-    <!--</button>-->
-    <div class="row">
-        <div class="col text-center">
-            <button href="#rating" data-toggle="collapse" class="btn btn-light text-center">
-                <span>Mostrar/Esconder Valoraciones y encuesta <i class="fa fa-arrows-alt-v"></i></span>
-            </button>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_donations"/>
-                <input type="hidden" name="business" value="HEK5NLG3UDNV6"/>
-                <input type="hidden" name="currency_code" value="EUR"/>
-                <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donate_LG.gif" border="0"
-                       name="submit"
-                       title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button"/>
-                <img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1"/>
+
+        <div class="row text-left pt-3 pt-lg-5">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/texts.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>Textos Lorem ipsum</strong></h3>
+                <p>Genera caracteres, palabras y párrafos</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-sm-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/password.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>Contraseñas</strong></h3>
+                <p>Generador y validador de contraseñas robustas</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/car.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>Vehículos</strong></h3>
+                <p>Genera matrículas y números de bastidor de todo tipo de vehículos</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/world.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>NIF de otros países</strong></h3>
+                <p>Genera NIF de otros países</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-xl-8 text-center">
+            <a class="btn btn-primary" href="https://generadordni.es">Pruébalo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fdb-block fp-active" data-block-type="features" data-id="6" draggable="true" id="detail_excel">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-12 text-center">
+            <h1>Generador de ficheros XLSX de importación</h1>
+          </div>
+        </div>
+
+        <div class="row text-left align-items-center pt-5 pb-md-5">
+          <div class="col-4 col-md-5">
+            <img alt="image" class="img-fluid" src="/landing/images/cols.png">
+          </div>
+
+          <div class="col-12 col-md-5 m-md-auto">
+            <h2><strong>Configura las columnas o importa tu plantilla de importación</strong></h2>
+            <p class="lead">Escoge con que tipo de dato quieres que se autorellene cada columna</p>
+          </div>
+        </div>
+
+        <div class="row text-left align-items-center pt-5 pb-md-5">
+          <div class="col-4 col-md-5 m-md-auto order-md-5">
+            <img alt="image" class="img-fluid" src="/landing/images/export.png">
+          </div>
+
+          <div class="col-12 col-md-5">
+            <h2><strong>Decide cuantas filas quieres, previsualiza el resultado y descárga tu excel listo para importar!</strong></h2>
+            <p class="lead">Con un máximo de 1000 filas para la versión gratuita</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-8 text-center">
+          <a class="btn btn-primary" href="https://generateandexport.testingdatagenerator.com">Pruébalo</a>
+        </div>
+      </div>
+    </section>
+    <section class="fdb-block" data-block-type="features" data-id="7" draggable="true" id="detail_api">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h1>API de generación de datos</h1>
+          </div>
+        </div>
+        <div class="row text-left mt-5">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/doi.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/doi</strong></h3>
+                <p>Genera NIF, NIE, CIF</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-sm-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/doi.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/profiles</strong></h3>
+                <p>Genera perfiles de persona y empresa</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/bank.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/bank</strong></h3>
+                <p>Genera cuentas bancarias y tarjetas de crédito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/texts.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/text</strong></h3>
+                <p>Genera caracteres, palabras y párrafos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-left pt-3 pt-lg-5">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/car.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/vehicle</strong></h3>
+                <p>Genera matrículas y números de bastidor</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-sm-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/person.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/person</strong></h3>
+                <p>Genera datos y códigos asociados a una persona: Pasaporte, Seguridad Social, correo electrónico, nombre de usuario, contraseña</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/otrosdc.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/misc</strong></h3>
+                <p>Genera otros tipos de códigos y datos. ISIN, CUPS, IMEI, LEI, Referencia catastral, Códigos postales, fechas, ciudades, etc</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 pt-3 pt-lg-0">
+            <div class="row">
+              <div class="col-3">
+                <img alt="image" class="img-fluid" src="landing/images/logo.svg">
+              </div>
+              <div class="col-9">
+                <h3><strong>/custom</strong></h3>
+                <p>Genera lotes de datos personalizados!</p>
+                <p>No consumas más llamadas de las necesarias! Personaliza tus lotes de datos!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-8 text-center">
+          <a class="btn btn-primary" href="https://api.generadordni.es">Pruébalo</a>
+        </div>
+      </div>
+    </section>
+    <section class="fdb-block py-0" data-block-type="contents" data-id="8" draggable="true" id="detail_chrome">
+      <div class="container py-5 my-5" style="background-image: url(https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//shapes/10.svg);">
+        <div class="row text-left py-5">
+          <div class="col-12 col-sm-10 m-auto ml-md-5 col-md-8 col-lg-6">
+            <div class="fdb-box">
+              <div class="row justify-content-center">
+                <div class="col-12 col-xl-8 text-center">
+                  <h1>Extensión para Google Chrome</h1>
+                  <p class="lead">Rellena cualquier formulario automágicamente y en 1 solo click!</p>
+
+                  <a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/generadordnies-magic-form/ldhgilameoaangheidpgljgoiojondom?hl=es">Pruébala</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fdb-block py-0" data-block-type="contacts" data-id="9" draggable="true" id="contact">
+      <div class="container py-5" style="background-image: url(https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//shapes/6.svg);">
+        <div class="row text-center justify-content-center">
+          <div class="col-12 col-md-8 col-lg-7">
+            <h1>Contacto</h1>
+            <p class="lead">Estamos abiertos a tus comentarios, propuestas o dudas!</p>
+          </div>
+        </div>
+        <div class="row-50">
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-7">
+            <form action="https://formspree.io/f/mleoyezb" method="post">
+              <div class="row">
+                <div class="col">
+                  <label>Email</label>
+                  <input class="form-control" id="email" name="_replyto" type="text" placeholder="Email" required>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col">
+                  <label>Nombre</label>
+                  <input class="form-control" id="name" name="name" type="text" placeholder="Nombre" required>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col">
+                  <label>Tu turno...</label>
+                  <textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="3" required></textarea>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col text-right">
+                  <button type="submit" class="btn btn-dark">Envía</button>
+                </div>
+              </div>
             </form>
+          </div>
         </div>
-    </div>
-
-    <br>
-    <br>
-    <div class="collapse show" id="rating">
-        <div class="row secondary">
-            <div class="col-md-12">
-                <h3 class="text-theme">Encuesta</h3>
-                <script>
-                    (function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd2dtOYkG5RXDUJkzaumdPPYutFaHBNjIDrO347RhPo8L.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");
-                </script>
-            </div>
+        <div class="row-100"></div>
+      </div>
+    </section>
+    <section class="fdb-block" data-block-type="call_to_action" data-id="11" draggable="true" id="donate">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <h2>Si estas herramientas te hacen el día a día un poco más fácil, colabora para mantener el proyecto vivo!</h2>
+            <p class="mt-5">
+              <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="aasensiog" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+            </p>
+            <p>ó</p>
+            <h2>Te puedes hacer suscriptor <a href="https://api.generadordni.es/prices">aquí</a> y olvidarte de los límites de llamadas y resultados de la API!</h2>
+            <h4>De paso, ayudarás a mantener el servicio y a que podamos seguir creciendo</h4>
+          </div>
         </div>
-    </div>
-</div>
-</div>
-<footer class="footer">
-    <br>
-    <div class="page-content p-5 text-center">
-        <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <legend>
-                    <div class="display-4">Generador DNI</div>
-                </legend>
-                <p>
-                    <!--<a href="https://twitter.com/aasensiog" target="_blank"><i class="fab fa-twitter fa-2x" alt="Twitter" title="Twitter" data-toggle="tooltip"></i></a>-->
-                    <a href="https://es.linkedin.com/in/albertasensio" target="_blank"><i
-                            class="fab fa-linkedin-in fa-2x" alt="LinkedIn" title="LinkedIn"
-                            data-toggle="tooltip"></i></a>
-                    <a dir="rtl" href="mailto:generadordni@gmail.com"><i class="fas fa-envelope fa-2x" alt="Email"
-                                                                         title="Email" data-toggle="tooltip"></i></a>
-                </p>
-                <p><a href="http://albertasensio.es">albertasensio.es</a></p>
-                <p><a href="cookies.html">Política de cookies</a></p>
-                <p><a href="terms_of_use.html">Condiciones de uso</a></p>
-                <p class="text-muted">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved
-                </p>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <form action="https://formspree.io/mknqvlga" id="contact-form" method="post" role="form">
-                    <fieldset>
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Nombre" required>
-                        <input class="form-control" id="email" name="_replyto" type="text"
-                               placeholder="Email (si quieres respuesta)" required>
-                        <textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="3"
-                                  required></textarea>
-                        <button type="submit" class="btn btn-primary btn-block">Envía</button>
-                    </fieldset>
-                </form>
-                <div class="sharethis-inline-reaction-buttons"></div>
-                <br>
-                <div class="sharethis-inline-share-buttons"></div>
-                <br>
-            </div>
+      </div>
+    </section>
+    <section class="fdb-block bg-gray" data-block-type="contacts" data-id="10" draggable="true" id="footer">
+      <div class="container">
+        <div class="row text-center justify-content-center">
+          <div class="col-12 col-md-8 col-lg-7">
+            <p class="h2">generadordni@gmail.com</p>
+          </div>
         </div>
-    </div>
-</footer>
-<!-- LIB -->
-<script src="js/build/lib.min.js"></script>
-<script src="js/bootstrap/4/js/bootstrap.min.js"></script>
+      </div>
+    </section>
 
-<!--MENU JS-->
-<script src="js/build/menu.min.js" charset="UTF-8"></script>
-
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/froala-editor/js/froala_editor.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7/fabric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tui-code-snippet@1.4.0/dist/tui-code-snippet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tui-image-editor@3.2.2/dist/tui-image-editor.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/froala-editor@3.1.1/js/third_party/image_tui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.2.2/js/third_party/font_awesome.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/brands.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/solid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/v4-shims.min.js"></script>
+  </body>
 </html>
