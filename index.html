@@ -79,51 +79,77 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-wallet"></i> <span>NIF, NIE, CIF</span></a>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-dni" data-role="menu" data-menu-id="dni" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-id-card"></i> <span>NIF, NIE, CIF</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-wallet"></i> <span>IBAN, CCC, Tarjetas</span></a>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-iban" data-role="menu" data-menu-id="iban" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-wallet"></i> <span>IBAN, CCC, Tarjetas</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-profiles" data-role="menu"
-                                        data-menu-id="profiles" data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-user-circle"></i> <span>Perfiles</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-qrcode"></i> <span>QR y barras</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-quote-right"></i> <span>Textos</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-password" data-role="menu"
-                                        data-menu-id="password" data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-key"></i> <span>Contraseñas</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc"
-                                        data-toggle="collapse" data-target=".navbar-collapse"> <i
-                        class="fas fa-passport"></i>
-                    <span>Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI, ISIN</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-globe-europe"></i> <span>NIFs europeos</span></a>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-profiles" data-role="menu" data-menu-id="profiles" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-user-circle"></i> <span>Perfiles</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-car-side"></i> <span>Vehículos</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-blender"></i> <span>Todo en 1</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-file-csv"></i> <span>Masivo</span></a></li>
-                <li class="nav-item"><a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count"
-                                        data-toggle="collapse" data-target=".navbar-collapse"><i
-                        class="fas fa-calculator"></i> <span>Contador caracteres</span></a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Más
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" id="menu-qr" data-role="menu" data-menu-id="qr" data-in-dropdown="dropdown"><i class="fas fa-qrcode"></i> <span>QR y barras</span></a>
+                      <a class="dropdown-item" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-in-dropdown="dropdown"><i class="fas fa-quote-right"></i> <span>Textos</span></a>
+                      <a class="dropdown-item" id="menu-password" data-role="menu" data-menu-id="password" data-in-dropdown="dropdown"><i class="fas fa-key"></i> <span>Contraseñas</span></a>
+                      <a class="dropdown-item" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-in-dropdown="dropdown"><i class="fas fa-passport"></i> <span>Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI, ISIN</span></a>
+                      <a class="dropdown-item" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-in-dropdown="dropdown"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span></a>
+                      <a class="dropdown-item" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-in-dropdown="dropdown"><i class="fas fa-car-side"></i> <span>Vehículos</span></a>
+                      <a class="dropdown-item" id="menu-crono" data-role="menu" data-menu-id="crono" data-in-dropdown="dropdown"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a>
+                      <a class="dropdown-item" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-in-dropdown="dropdown"><i class="fas fa-blender"></i> <span>Todo en 1</span></a>
+                      <a class="dropdown-item" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-in-dropdown="dropdown"><i class="fas fa-file-csv"></i> <span>Masivo</span></a>
+                      <a class="dropdown-item" id="menu-count" data-role="menu" data-menu-id="count" data-in-dropdown="dropdown"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a>
+                    </div>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-qr" data-role="menu" data-menu-id="qr" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-qrcode"></i> <span>QR y barras</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-lorem" data-role="menu" data-menu-id="lorem" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-quote-right"></i> <span>Textos</span></a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-password" data-role="menu" data-menu-id="password" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-key"></i> <span>Contraseñas</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-otrosdc" data-role="menu" data-menu-id="otrosdc" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fas fa-passport"></i><span>Pasaporte, Seguridad Social, Catastro, CUPS, LEI, IMEI, ISIN</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-europeo" data-role="menu" data-menu-id="europeo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-globe-europe"></i> <span>NIFs europeos</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-vehicle" data-role="menu" data-menu-id="vehicle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-car-side"></i> <span>Vehículos</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-crono" data-role="menu" data-menu-id="crono" data-toggle="collapse" data-target=".navbar-collapse"><i id="stopwatch" class="fa fa-stopwatch"></i> <span>Cronómetro</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-allin1" data-role="menu" data-menu-id="allin1" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-blender"></i> <span>Todo en 1</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-masivo" data-role="menu" data-menu-id="masivo" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-file-csv"></i> <span>Masivo</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hand" id="menu-count" data-role="menu" data-menu-id="count" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-calculator"></i> <span>Contador caracteres</span></a>
+                </li>
+                -->
             </ul>
         </div>
+        <form class="d-flex">
+
+            <a class="btn btn-danger" target="_blank" href="https://api.generadordni.es" title="¿Cansado de copiar y pegar? Descubre nuestra API y ahorra tiempo" data-toggle="tooltip"><i class="fas fa-robot"></i> API v2 disponible!</a> &nbsp;
+            <a class="btn btn-warning" target="_blank" href="https://generateandexport.testingdatagenerator.com/" title="Configura las columnas y como quieres que se rellenen. Descárgalo e importa!" data-toggle="tooltip"><i class="fas fa-file-excel"></i></a> &nbsp;
+            <a class="btn btn-primary" target="_blank" href="https://www.buymeacoffee.com/aasensiog" title="Dedicamos mucho tiempo y dinero en mejorar y mantener este sitio vivo. Ahora sin publicidad. Colabora para que podamos continuar :)" data-toggle="tooltip"><img
+                                src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"
+                                height="20px"></span></a>
+        </form>
     </nav>
     <!-- Page Content  -->
     <div class="container-fluid">
@@ -139,16 +165,12 @@
                             <b id="title"></b></h3>
                     </div>
                     <div class="col-md-auto">
-                        <a class="btn btn-warning" target="_blank" href="https://generateandexport.testingdatagenerator.com/" title="Configura las columnas y como quieres que se rellenen. Descárgalo e importa!" data-toggle="tooltip"><i class="fas fa-file-excel fa-spin"></i> Genera excels de importación</a>
+
                         <!--<a class="btn btn-info" target="_blank" href="https://extensions.generadordni.es/"
                            title="https://extensions.generadordni.es"
                            data-toggle="tooltip"><img src="img/extensions.generadordni.svg" height="20px"/>Chrome
                             Extension</a>-->
-                        <a class="btn btn-danger" target="_blank" href="https://api.generadordni.es" title="¿Cansado de copiar y pegar? Descubre nuestra API y ahorra tiempo" data-toggle="tooltip"><i class="fas fa-robot"></i> API v2
-                            disponible!</a>
-                        <a class="btn btn-primary" target="_blank" href="https://www.buymeacoffee.com/aasensiog" title="Dedicamos mucho tiempo y dinero en mejorar y mantener este sitio vivo. Ahora sin publicidad. Colabora para que podamos continuar :)" data-toggle="tooltip"><img
-                                src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"
-                                height="20px">Buy me a coffee</span></a>
+
                         <span id="left_generations"></span>
                     </div>
                 </div>
